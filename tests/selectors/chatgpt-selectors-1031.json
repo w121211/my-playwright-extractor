@@ -1,0 +1,156 @@
+{
+  "version": "1.0",
+  "pages": {
+    "landing": {
+      "urlGlob": "https://chatgpt.com/",
+      "elements": {
+        "loginIndicator": {
+          "selector": "[data-testid=\"accounts-profile-button\"]",
+          "hints": [
+            "Profile button with user avatar",
+            "Appears twice: once in collapsed sidebar, once in expanded",
+            "Stable data-testid attribute"
+          ]
+        },
+        "newChatButton": {
+          "selector": "[data-testid=\"create-new-chat-button\"]",
+          "hints": [
+            "Creates a new conversation",
+            "Appears in both collapsed and expanded sidebar states",
+            "Stable data-testid attribute"
+          ]
+        },
+        "recentChatLinks": {
+          "selector": "a[href^=\"/c/\"]",
+          "hints": [
+            "Links to conversation pages",
+            "Located in sidebar under 'Chats' section",
+            "Ensure sidebar is expanded to access all links",
+            "URL pattern: /c/{conversation-id}"
+          ]
+        },
+        "messageInputArea": {
+          "selector": ["#prompt-textarea", "div[contenteditable=\"true\"]#prompt-textarea"],
+          "hints": [
+            "ProseMirror editor with contenteditable=true",
+            "Stable ID: prompt-textarea",
+            "Input triggers autocomplete suggestions"
+          ]
+        },
+        "messageSubmitButton": {
+          "selector": ["[data-testid=\"send-button\"]", "button[aria-label=\"Send prompt\"]"],
+          "hints": [
+            "Only visible after user types in message input",
+            "Disabled when input is empty",
+            "ID: composer-submit-button",
+            "Stable data-testid attribute"
+          ]
+        },
+        "sidebarToggleButton": {
+          "selector": "[data-testid=\"close-sidebar-button\"]",
+          "hints": [
+            "Toggles sidebar visibility",
+            "Located in expanded sidebar",
+            "aria-label: Close sidebar"
+          ]
+        }
+      },
+      "hints": [
+        "Message submit button only appears after typing in the input area",
+        "Sidebar can be collapsed or expanded, affecting visibility of chat history",
+        "Use sidebarToggleButton to reveal recent chats if sidebar is collapsed"
+      ]
+    },
+    "chat": {
+      "urlGlob": "https://chatgpt.com/c/**",
+      "elements": {
+        "loginIndicator": {
+          "selector": "[data-testid=\"accounts-profile-button\"]",
+          "hints": [
+            "Same as landing page",
+            "Profile button with user avatar"
+          ]
+        },
+        "newChatButton": {
+          "selector": "[data-testid=\"create-new-chat-button\"]",
+          "hints": [
+            "Same as landing page",
+            "Creates a new conversation"
+          ]
+        },
+        "recentChatLinks": {
+          "selector": "a[href^=\"/c/\"]",
+          "hints": [
+            "Same as landing page",
+            "Available in sidebar when expanded"
+          ]
+        },
+        "messageInputArea": {
+          "selector": ["#prompt-textarea", "div[contenteditable=\"true\"]#prompt-textarea"],
+          "hints": [
+            "Same as landing page",
+            "ProseMirror editor"
+          ]
+        },
+        "messageSubmitButton": {
+          "selector": ["[data-testid=\"send-button\"]", "button[aria-label=\"Send prompt\"]"],
+          "hints": [
+            "Same as landing page",
+            "Only visible when input contains text"
+          ]
+        },
+        "messageBlocks": {
+          "selector": "article[data-testid^=\"conversation-turn-\"]",
+          "hints": [
+            "Each turn is an article element",
+            "data-testid follows pattern: conversation-turn-{number}",
+            "Contains either user or assistant message (not both in same article)"
+          ],
+          "fields": {
+            "userMessage": {
+              "selector": "[data-message-author-role=\"user\"]",
+              "attr": "textContent",
+              "hints": [
+                "User messages within conversation turns",
+                "Contains user prompt text"
+              ]
+            },
+            "assistantMessage": {
+              "selector": "[data-message-author-role=\"assistant\"]",
+              "attr": "textContent",
+              "hints": [
+                "Assistant responses within conversation turns",
+                "May contain code blocks, tables, and formatted content"
+              ]
+            }
+          }
+        },
+        "aiGeneratingIndicator": {
+          "selector": ["[role=\"progressbar\"]", "[class*=\"spinner\"]"],
+          "hints": [
+            "Visible while ChatGPT is generating response",
+            "May not be present when no generation is in progress"
+          ]
+        },
+        "sidebarToggleButton": {
+          "selector": "[data-testid=\"close-sidebar-button\"]",
+          "hints": [
+            "Same as landing page"
+          ]
+        }
+      },
+      "hints": [
+        "Conversation structure: article elements with data-testid pattern",
+        "Each turn contains either user or assistant message, identified by data-message-author-role",
+        "Messages can contain rich content (code, tables, formatting)"
+      ]
+    }
+  },
+  "hints": [
+    "Selector priority: data-testid > id > role/aria attributes > structural selectors",
+    "ChatGPT uses stable data-testid attributes throughout the interface",
+    "Sidebar visibility affects access to recent chat links",
+    "Message submit button dynamically appears based on input state",
+    "All interactive elements use proper ARIA labels for accessibility"
+  ]
+}

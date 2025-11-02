@@ -1,0 +1,194 @@
+{
+  "version": "1.0",
+  "pages": {
+    "landing": {
+      "urlGlob": "https://gemini.google.com/app/",
+      "elements": {
+        "loginIndicator": {
+          "selector": "a.gb_B[role='button'][aria-label*='Google Account']",
+          "hints": [
+            "Google Account button in header",
+            "Stable selector using role and aria-label"
+          ]
+        },
+        "newChatButton": {
+          "selector": "button[aria-label='New chat']",
+          "hints": [
+            "Creates a new conversation",
+            "Available in sidebar"
+          ]
+        },
+        "recentChatLinks": {
+          "selector": "[data-test-id='conversation']",
+          "hints": [
+            "Links to conversation pages",
+            "Located in sidebar under 'Recent' section",
+            "Ensure sidebar is expanded to access all links"
+          ]
+        },
+        "messageInputArea": {
+          "selector": "[aria-label='Enter a prompt here'][role='textbox']",
+          "hints": [
+            "Main input area for prompts",
+            "Stable aria-label selector"
+          ]
+        },
+        "mainMenuButton": {
+          "selector": ["button[aria-label='Main menu']", "[data-test-id='side-nav-menu-button']"],
+          "hints": [
+            "Toggle sidebar visibility",
+            "Use to reveal recent chats if sidebar is collapsed"
+          ]
+        },
+        "temporaryChatButton": {
+          "selector": "button[aria-label='Temporary chat']"
+        },
+        "searchButton": {
+          "selector": "button[aria-label='Search']"
+        },
+        "uploadButton": {
+          "selector": "button[aria-label='Open upload file menu']"
+        },
+        "microphoneButton": {
+          "selector": "button[aria-label='Microphone']"
+        }
+      },
+      "hints": [
+        "Sidebar can be collapsed or expanded, affecting visibility of chat history",
+        "Use mainMenuButton to reveal recent chats if sidebar is collapsed"
+      ]
+    },
+    "chat": {
+      "urlGlob": "https://gemini.google.com/app/*",
+      "elements": {
+        "loginIndicator": {
+          "selector": "a.gb_B[role='button'][aria-label*='Google Account']",
+          "hints": [
+            "Same as landing page"
+          ]
+        },
+        "newChatButton": {
+          "selector": "button[aria-label='New chat']",
+          "hints": [
+            "Same as landing page"
+          ]
+        },
+        "recentChatLinks": {
+          "selector": "[data-test-id='conversation']",
+          "hints": [
+            "Same as landing page",
+            "Available in sidebar when expanded"
+          ]
+        },
+        "messageInputArea": {
+          "selector": "[aria-label='Enter a prompt here'][role='textbox']",
+          "hints": [
+            "Same as landing page"
+          ]
+        },
+        "messageSubmitButton": {
+          "selector": "button[aria-label='Send message']",
+          "hints": [
+            "Submits the message",
+            "Stable aria-label selector"
+          ]
+        },
+        "messageBlocks": {
+          "selector": ".conversation-container",
+          "hints": [
+            "Each conversation turn (user query + model response)",
+            "Uses custom web components: user-query and model-response"
+          ],
+          "fields": {
+            "userQuery": {
+              "selector": "user-query",
+              "fields": {
+                "role": {
+                  "selector": "user-query",
+                  "attr": "tagName"
+                },
+                "text": {
+                  "selector": "user-query-content",
+                  "attr": "textContent"
+                }
+              }
+            },
+            "modelResponse": {
+              "selector": "model-response",
+              "fields": {
+                "role": {
+                  "selector": "model-response",
+                  "attr": "tagName"
+                },
+                "text": {
+                  "selector": ["message-content", ".model-response-text"],
+                  "attr": "textContent"
+                }
+              }
+            }
+          }
+        },
+        "aiGeneratingIndicator": {
+          "selector": "[class*='spinner']",
+          "hints": [
+            "Loading indicator when AI is generating",
+            "May not be present when no generation is in progress"
+          ]
+        },
+        "mainMenuButton": {
+          "selector": ["button[aria-label='Main menu']", "[data-test-id='side-nav-menu-button']"],
+          "hints": [
+            "Same as landing page"
+          ]
+        },
+        "uploadButton": {
+          "selector": "button[aria-label='Open upload file menu']"
+        },
+        "microphoneButton": {
+          "selector": "button[aria-label='Microphone']"
+        },
+        "copyPromptButton": {
+          "selector": "button[aria-label='Copy prompt']",
+          "hints": [
+            "Copy user's prompt"
+          ]
+        },
+        "editPromptButton": {
+          "selector": "button[aria-label='Edit']",
+          "hints": [
+            "Edit user's prompt"
+          ]
+        },
+        "copyButton": {
+          "selector": "button[aria-label='Copy']",
+          "hints": [
+            "Copy AI response"
+          ]
+        },
+        "thumbUpButton": {
+          "selector": "button[aria-label='Good response']"
+        },
+        "thumbDownButton": {
+          "selector": "button[aria-label='Bad response']"
+        },
+        "redoButton": {
+          "selector": "button[aria-label='Redo']",
+          "hints": [
+            "Regenerate response"
+          ]
+        }
+      },
+      "hints": [
+        "Conversation structure uses custom web components",
+        "Each turn contains both user query and model response",
+        "Messages can contain rich content (code, tables, formatting)"
+      ]
+    }
+  },
+  "hints": [
+    "Selector priority: aria-label > data-test-id > structural selectors",
+    "Gemini uses aria-label extensively throughout the interface",
+    "Sidebar visibility affects access to recent chat links",
+    "Custom web components (user-query, model-response) for conversation structure"
+  ]
+}

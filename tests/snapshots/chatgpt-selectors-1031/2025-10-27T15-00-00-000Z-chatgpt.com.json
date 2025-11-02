@@ -1,0 +1,135 @@
+{
+  "fixture": {
+    "name": "2025-10-27T15-00-00-000Z-chatgpt.com",
+    "url": "https://chatgpt.com/c/sample-convo"
+  },
+  "selector": {
+    "file": "chatgpt-selectors-1031.json",
+    "version": "1.0"
+  },
+  "page": "chat",
+  "selectors": {
+    "loginIndicator": {
+      "selector": [
+        "[data-testid=\"accounts-profile-button\"]"
+      ],
+      "count": 1,
+      "samples": [
+        "Profile"
+      ]
+    },
+    "newChatButton": {
+      "selector": [
+        "[data-testid=\"create-new-chat-button\"]"
+      ],
+      "count": 1,
+      "samples": [
+        "New Chat"
+      ]
+    },
+    "recentChatLinks": {
+      "selector": [
+        "a[href^=\"/c/\"]"
+      ],
+      "count": 3,
+      "samples": [
+        "First chat",
+        "Sample conversation",
+        "Third chat"
+      ]
+    },
+    "messageInputArea": {
+      "selector": [
+        "#prompt-textarea",
+        "div[contenteditable=\"true\"]#prompt-textarea"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "messageSubmitButton": {
+      "selector": [
+        "[data-testid=\"send-button\"]",
+        "button[aria-label=\"Send prompt\"]"
+      ],
+      "count": 1,
+      "samples": [
+        "Send"
+      ]
+    },
+    "messageBlocks": {
+      "selector": [
+        "article[data-testid^=\"conversation-turn-\"]"
+      ],
+      "count": 2,
+      "samples": [
+        "Hello there!",
+        "Hi! How can I help you today?"
+      ],
+      "fields": [
+        {
+          "userMessage": [
+            "Hello there!"
+          ],
+          "assistantMessage": []
+        },
+        {
+          "userMessage": [],
+          "assistantMessage": [
+            "Hi! How can I help you today?"
+          ]
+        }
+      ]
+    },
+    "aiGeneratingIndicator": {
+      "selector": [
+        "[role=\"progressbar\"]",
+        "[class*=\"spinner\"]"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "sidebarToggleButton": {
+      "selector": [
+        "[data-testid=\"close-sidebar-button\"]"
+      ],
+      "count": 1,
+      "samples": [
+        "Toggle Sidebar"
+      ]
+    }
+  },
+  "automator": {
+    "checkLoginStatus": {
+      "success": true,
+      "result": true
+    },
+    "getChatState": {
+      "success": true,
+      "result": "generating"
+    },
+    "getMessages": {
+      "success": true,
+      "result": {
+        "messages": [
+          {
+            "userMessage": [
+              "Hello there!"
+            ],
+            "assistantMessage": []
+          },
+          {
+            "userMessage": [],
+            "assistantMessage": [
+              "Hi! How can I help you today?"
+            ]
+          }
+        ],
+        "count": 2
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "userMessage": [
+      "Hello there!"
+    ],
+    "assistantMessage": []
+  },
+  {
+    "userMessage": [],
+    "assistantMessage": [
+      "Hi! How can I help you today?"
+    ]
+  }
+]
