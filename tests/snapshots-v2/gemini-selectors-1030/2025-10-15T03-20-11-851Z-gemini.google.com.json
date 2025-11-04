@@ -1,0 +1,154 @@
+{
+  "fixture": {
+    "name": "2025-10-15T03-20-11-851Z-gemini.google.com",
+    "url": "https://gemini.google.com/app/a5f0f196fa40c785",
+    "timestamp": "2025-10-15T03:20:11.859Z",
+    "dir": "/Users/cw/Documents/GitHub/my-playwright-extractor/tests/fixtures/2025-10-15T03-20-11-851Z-gemini.google.com"
+  },
+  "selector": {
+    "basename": "gemini-selectors-1030",
+    "path": "/Users/cw/Documents/GitHub/my-playwright-extractor/tests/selectors/gemini-selectors-1030.json",
+    "version": "1.0"
+  },
+  "automator": {
+    "class": "GeminiAutomator"
+  },
+  "page": "chat",
+  "selectors": {
+    "loginIndicator": {
+      "selector": [
+        "a.gb_B[role='button'][aria-label*='Google Account']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "newChatButton": {
+      "selector": [
+        "button[aria-label='New chat']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "recentChatLinks": {
+      "selector": [
+        "[data-test-id='conversation']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "messageInputArea": {
+      "selector": [
+        "[aria-label='Enter a prompt here'][role='textbox']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "messageSubmitButton": {
+      "selector": [
+        "button[aria-label='Send message']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "messageBlocks": {
+      "selector": [
+        ".conversation-container"
+      ],
+      "count": 0,
+      "samples": [],
+      "fields": []
+    },
+    "aiGeneratingIndicator": {
+      "selector": [
+        "[class*='spinner']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "mainMenuButton": {
+      "selector": [
+        "button[aria-label='Main menu']",
+        "[data-test-id='side-nav-menu-button']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "uploadButton": {
+      "selector": [
+        "button[aria-label='Open upload file menu']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "microphoneButton": {
+      "selector": [
+        "button[aria-label='Microphone']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "copyPromptButton": {
+      "selector": [
+        "button[aria-label='Copy prompt']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "editPromptButton": {
+      "selector": [
+        "button[aria-label='Edit']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "copyButton": {
+      "selector": [
+        "button[aria-label='Copy']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "thumbUpButton": {
+      "selector": [
+        "button[aria-label='Good response']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "thumbDownButton": {
+      "selector": [
+        "button[aria-label='Bad response']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "redoButton": {
+      "selector": [
+        "button[aria-label='Redo']"
+      ],
+      "count": 0,
+      "samples": []
+    }
+  },
+  "automatorResults": {
+    "checkLoginStatus": {
+      "success": true,
+      "result": true
+    },
+    "getChatState": {
+      "success": true,
+      "result": "idle"
+    },
+    "getMessages": {
+      "success": true,
+      "result": {
+        "messages": [],
+        "count": 0
+      }
+    }
+  }
+}

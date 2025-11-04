@@ -1,0 +1,255 @@
+{
+  "fixture": {
+    "name": "2025-10-15T03-05-57-529Z-grok.com",
+    "url": "https://grok.com/c/49fc0ee5-a7b6-4971-afee-e3e33dcad20b",
+    "timestamp": "2025-10-15T03:05:57.533Z",
+    "dir": "/Users/cw/Documents/GitHub/my-playwright-extractor/tests/fixtures/2025-10-15T03-05-57-529Z-grok.com"
+  },
+  "selector": {
+    "basename": "grok-selectors-complete-1104",
+    "path": "/Users/cw/Documents/GitHub/my-playwright-extractor/tests/selectors/grok/grok-selectors-complete-1104.json",
+    "version": "1.0"
+  },
+  "automator": {
+    "class": "GrokAutomator"
+  },
+  "page": "chat",
+  "selectors": {
+    "messageBlocks": {
+      "selector": [
+        "main > div:nth-child(2) > div > div"
+      ],
+      "count": 3,
+      "samples": [
+        "helloHey hey! What's up? Ready to dive into whatever you're pondering about today? 😄",
+        "How can Grok help?AutoAuto",
+        ""
+      ],
+      "fields": [
+        {
+          "userMessage": [
+            "hello"
+          ],
+          "aiMessage": [
+            "Hey hey! What's up? Ready to dive into whatever you're pondering about today? 😄"
+          ],
+          "thoughtIndicator": []
+        },
+        {
+          "userMessage": [],
+          "aiMessage": [],
+          "thoughtIndicator": []
+        },
+        {
+          "userMessage": [],
+          "aiMessage": [],
+          "thoughtIndicator": []
+        }
+      ]
+    },
+    "aiGeneratingIndicator": {
+      "selector": [
+        "span:has-text('Thought for')",
+        "[aria-label*='generating']",
+        "[class*='spinner']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "messageInputArea": {
+      "selector": [
+        "[role='textbox']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "messageSubmitButton": {
+      "selector": [
+        "button[aria-label='Submit']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "editButton": {
+      "selector": [
+        "button[aria-label='Edit']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "copyButton": {
+      "selector": [
+        "button[aria-label='Copy']"
+      ],
+      "count": 2,
+      "samples": [
+        "",
+        ""
+      ]
+    },
+    "regenerateButton": {
+      "selector": [
+        "button[aria-label='Regenerate']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "readAloudButton": {
+      "selector": [
+        "button[aria-label='Read Aloud']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "likeButton": {
+      "selector": [
+        "button[aria-label='Like']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "dislikeButton": {
+      "selector": [
+        "button[aria-label='Dislike']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "shareButton": {
+      "selector": [
+        "button[aria-label='Create share link']"
+      ],
+      "count": 1,
+      "samples": [
+        "Share"
+      ]
+    },
+    "startThreadButton": {
+      "selector": [
+        "button[aria-label='Start thread']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "moreActionsButton": {
+      "selector": [
+        "button[aria-label='More actions']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "moreButton": {
+      "selector": [
+        "button[aria-label='More']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "previousMessageButton": {
+      "selector": [
+        "button[aria-label='Navigate to previous message']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "nextMessageButton": {
+      "selector": [
+        "button[aria-label='Navigate to next message']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "goToResponseButton": {
+      "selector": [
+        "button[aria-label='Go to response']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "modelSelector": {
+      "selector": [
+        "button[aria-label='Model select'][data-state]"
+      ],
+      "count": 2,
+      "samples": [
+        "Auto",
+        "Auto"
+      ]
+    },
+    "attachButton": {
+      "selector": [
+        "button[aria-label='Attach']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "voiceModeButton": {
+      "selector": [
+        "button[aria-label='Enter voice mode']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "recentChatLinks": {
+      "selector": [
+        "a[href^='/c/']"
+      ],
+      "count": 10,
+      "samples": [
+        "Friendly chat initiation",
+        "Chrome Extension: Local App Bridge",
+        "植入模擬卵巢：性別與科技交錯"
+      ]
+    }
+  },
+  "automatorResults": {
+    "checkLoginStatus": {
+      "success": true,
+      "result": false
+    },
+    "getChatState": {
+      "success": true,
+      "result": "idle"
+    },
+    "getMessages": {
+      "success": true,
+      "result": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "hello",
+            "timestamp": null
+          },
+          {
+            "role": "assistant",
+            "content": "Hey hey! What's up? Ready to dive into whatever you're pondering about today? 😄",
+            "timestamp": null
+          }
+        ],
+        "count": 2
+      }
+    }
+  }
+}

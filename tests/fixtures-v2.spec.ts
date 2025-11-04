@@ -1,4 +1,4 @@
-// tests/fixtures-comprehensive.spec.ts
+// tests/fixtures-v2.spec.ts
 import { expect, test } from "@playwright/test";
 import type { Page } from "playwright";
 import {
@@ -8,14 +8,13 @@ import {
   mkdirSync,
   writeFileSync,
 } from "node:fs";
-import { join, resolve, basename } from "node:path";
+import { join, resolve } from "node:path";
 import { extractFrom, resolveLocator } from "../src/extractor.js";
-import type {
-  AiAssistantSiteSpec,
-  AiAssistantPageSpec,
-  SelectorDef,
-} from "../src/types.js";
+import type { AiAssistantSiteSpec, AiAssistantPageSpec } from "../src/types.js";
 import { BaseAiChatAutomator } from "../src/tasks/aichat/base.js";
+import { GrokAutomator } from "../src/tasks/aichat/grok.js";
+import { ChatGPTAutomator } from "../src/tasks/aichat/chatgpt.js";
+import { GeminiAutomator } from "../src/tasks/aichat/gemini.js";
 
 interface FixtureMetadata {
   url: string;
@@ -26,7 +25,6 @@ interface FixtureMetadata {
 interface SelectorSpec {
   path: string;
   basename: string;
-  domain: string;
   spec: AiAssistantSiteSpec;
 }
 
@@ -34,7 +32,12 @@ interface FixtureInfo {
   name: string;
   dir: string;
   metadata: FixtureMetadata;
-  domain: string;
+}
+
+interface AutomatorConfig {
+  glob: string;
+  name: string;
+  factory: (page: Page, pageSpec: AiAssistantPageSpec) => BaseAiChatAutomator;
 }
 
 interface TestCase {
@@ -42,43 +45,75 @@ interface TestCase {
   selector: SelectorSpec;
   pageName: string;
   pageSpec: AiAssistantPageSpec;
+  automatorConfig: AutomatorConfig;
 }
 
 const fixtureRoot = resolve("tests/fixtures");
 const selectorRoot = resolve("tests/selectors");
-const snapshotRoot = resolve("tests/snapshots");
+const snapshotRoot = resolve("tests/snapshots-v2");
 
-function extractDomain(url: string): string {
-  const match = url.match(/https?:\/\/([^\/]+)/);
-  return match ? match[1] : "";
+const AUTOMATOR_REGISTRY: AutomatorConfig[] = [
+  {
+    glob: "*grok*",
+    name: "GrokAutomator",
+    factory: (page, pageSpec) => new GrokAutomator(page, pageSpec),
+  },
+  {
+    glob: "*chatgpt*",
+    name: "ChatGPTAutomator",
+    factory: (page, pageSpec) => new ChatGPTAutomator(page, pageSpec),
+  },
+  {
+    glob: "*gemini*",
+    name: "GeminiAutomator",
+    factory: (page, pageSpec) => new GeminiAutomator(page, pageSpec),
+  },
+];
+
+function matchPattern(str: string, pattern: string): boolean {
+  const regex = new RegExp(pattern.replace(/\*/g, ".*"), "i");
+  return regex.test(str);
+}
+
+function findAutomatorConfig(selectorBasename: string): AutomatorConfig | null {
+  for (const config of AUTOMATOR_REGISTRY) {
+    if (matchPattern(selectorBasename, config.glob)) {
+      return config;
+    }
+  }
+  return null;
 }
 
 function loadSelectorSpecs(): SelectorSpec[] {
-  const files = readdirSync(selectorRoot).filter((f) => f.endsWith(".json"));
-  return files.map((file) => {
-    const path = join(selectorRoot, file);
-    const spec = JSON.parse(readFileSync(path, "utf-8")) as AiAssistantSiteSpec;
-    const domain = extractDomainFromSpec(spec);
-    return {
-      path,
-      basename: file.replace(".json", ""),
-      domain,
-      spec,
-    };
-  });
-}
+  const specs: SelectorSpec[] = [];
 
-function extractDomainFromSpec(spec: AiAssistantSiteSpec): string {
-  for (const page of Object.values(spec.pages)) {
-    if (page.urlGlob) {
-      const globs = Array.isArray(page.urlGlob) ? page.urlGlob : [page.urlGlob];
-      for (const glob of globs) {
-        const domain = extractDomain(glob);
-        if (domain) return domain;
+  function scanDirectory(dir: string) {
+    const entries = readdirSync(dir, { withFileTypes: true });
+
+    for (const entry of entries) {
+      const fullPath = join(dir, entry.name);
+
+      if (entry.isDirectory()) {
+        scanDirectory(fullPath);
+      } else if (entry.isFile() && entry.name.endsWith(".json")) {
+        try {
+          const spec = JSON.parse(
+            readFileSync(fullPath, "utf-8")
+          ) as AiAssistantSiteSpec;
+          specs.push({
+            path: fullPath,
+            basename: entry.name.replace(".json", ""),
+            spec,
+          });
+        } catch (error) {
+          console.warn(`Failed to load selector spec: ${fullPath}`, error);
+        }
       }
     }
   }
-  return "";
+
+  scanDirectory(selectorRoot);
+  return specs;
 }
 
 function loadFixtures(): FixtureInfo[] {
@@ -94,13 +129,11 @@ function loadFixtures(): FixtureInfo[] {
     const metadata = JSON.parse(
       readFileSync(metadataPath, "utf-8")
     ) as FixtureMetadata;
-    const domain = extractDomain(metadata.url);
 
     fixtures.push({
       name: entry.name,
       dir,
       metadata,
-      domain,
     });
   }
 
@@ -138,11 +171,14 @@ function generateTestCases(): TestCase[] {
 
   for (const fixture of fixtures) {
     for (const selector of selectors) {
-      if (fixture.domain !== selector.domain) continue;
       const pageName = matchPageSpec(fixture.metadata.url, selector.spec);
       if (!pageName) continue;
+
       const pageSpec = selector.spec.pages[pageName];
-      cases.push({ fixture, selector, pageName, pageSpec });
+      const automatorConfig = findAutomatorConfig(selector.basename);
+      if (!automatorConfig) continue;
+
+      cases.push({ fixture, selector, pageName, pageSpec, automatorConfig });
     }
   }
 
@@ -160,18 +196,6 @@ async function mountFixture(page: Page, fixture: FixtureInfo) {
     });
   });
   await page.goto(fixture.metadata.url);
-}
-
-function isCoreElement(key: string): boolean {
-  const coreElements = new Set([
-    "loginIndicator",
-    "newChatButton",
-    "recentChatLinks",
-    "messageInputArea",
-    "messageSubmitButton",
-    "messageBlocks",
-  ]);
-  return coreElements.has(key);
 }
 
 async function testSelectors(page: Page, pageSpec: AiAssistantPageSpec) {
@@ -203,19 +227,17 @@ async function testSelectors(page: Page, pageSpec: AiAssistantPageSpec) {
     }
 
     results[key] = result;
-
-    // Only assert core elements must match
-    // Optional elements (aiGeneratingIndicator, sidebarToggleButton, etc.) are allowed to have count = 0
-    // if (isCoreElement(key)) {
-    //   expect(count, `Core selector "${key}" should match elements`).toBeGreaterThan(0);
-    // }
   }
 
   return results;
 }
 
-async function testAutomator(page: Page, pageSpec: AiAssistantPageSpec) {
-  const automator = new BaseAiChatAutomator(page, pageSpec);
+async function testAutomator(
+  page: Page,
+  pageSpec: AiAssistantPageSpec,
+  automatorConfig: AutomatorConfig
+) {
+  const automator = automatorConfig.factory(page, pageSpec);
   const results: Record<string, any> = {};
 
   const methods = [
@@ -260,7 +282,7 @@ function saveSnapshot(
 
 const testCases = generateTestCases();
 
-test.describe("Comprehensive fixture testing", () => {
+test.describe("Comprehensive fixture testing v2", () => {
   test.describe("Selector and automator snapshots", () => {
     for (const testCase of testCases) {
       const testName = `${testCase.selector.basename} × ${testCase.fixture.name}`;
@@ -269,20 +291,32 @@ test.describe("Comprehensive fixture testing", () => {
         await mountFixture(page, testCase.fixture);
 
         const selectorResults = await testSelectors(page, testCase.pageSpec);
-        const automatorResults = await testAutomator(page, testCase.pageSpec);
+        const automatorResults = await testAutomator(
+          page,
+          testCase.pageSpec,
+          testCase.automatorConfig
+        );
 
         const snapshot = {
           fixture: {
             name: testCase.fixture.name,
             url: testCase.fixture.metadata.url,
+            // title: testCase.fixture.metadata.title,
+            timestamp: testCase.fixture.metadata.timestamp,
+            dir: testCase.fixture.dir,
           },
           selector: {
-            file: `${testCase.selector.basename}.json`,
+            basename: testCase.selector.basename,
+            path: testCase.selector.path,
             version: testCase.selector.spec.version ?? "unknown",
+          },
+          automator: {
+            // pattern: testCase.automatorConfig.glob,
+            class: testCase.automatorConfig.name,
           },
           page: testCase.pageName,
           selectors: selectorResults,
-          automator: automatorResults,
+          automatorResults: automatorResults,
         };
 
         saveSnapshot(

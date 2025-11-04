@@ -1,0 +1,359 @@
+{
+  "fixture": {
+    "name": "2025-10-15T03-07-02-845Z-grok.com",
+    "url": "https://grok.com/",
+    "timestamp": "2025-10-15T03:07:02.850Z",
+    "dir": "/Users/cw/Documents/GitHub/my-playwright-extractor/tests/fixtures/2025-10-15T03-07-02-845Z-grok.com"
+  },
+  "selector": {
+    "basename": "grok-selectors-partial",
+    "path": "/Users/cw/Documents/GitHub/my-playwright-extractor/tests/selectors/grok/grok-selectors-partial.json",
+    "version": "1.0"
+  },
+  "automator": {
+    "class": "GrokAutomator"
+  },
+  "page": "landing",
+  "selectors": {
+    "loginIndicator": {
+      "selector": [
+        "img[alt='pfp']",
+        "button[aria-haspopup='menu'] img[alt='pfp']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "signInLink": {
+      "selector": [
+        "a[href='/sign-in']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "signUpLink": {
+      "selector": [
+        "a[href='/sign-up']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "homeLink": {
+      "selector": [
+        "a[href='/'][aria-label='Home page']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "sidebarToggle": {
+      "selector": [
+        "button[aria-label='Toggle Sidebar']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "searchButton": {
+      "selector": [
+        "button[aria-label='Search']"
+      ],
+      "count": 1,
+      "samples": [
+        "Search⌘K"
+      ]
+    },
+    "chatNavLink": {
+      "selector": [
+        "a[href='/']"
+      ],
+      "count": 2,
+      "samples": [
+        "",
+        "Chat"
+      ]
+    },
+    "voiceNavLink": {
+      "selector": [
+        "a[href='/?voice=true']"
+      ],
+      "count": 1,
+      "samples": [
+        "Voice"
+      ]
+    },
+    "imagineNavLink": {
+      "selector": [
+        "a[href='/imagine']"
+      ],
+      "count": 1,
+      "samples": [
+        "Imagine"
+      ]
+    },
+    "projectsNavLink": {
+      "selector": [
+        "a[href='/project']"
+      ],
+      "count": 1,
+      "samples": [
+        "Projects"
+      ]
+    },
+    "historyNavLink": {
+      "selector": [
+        "a[href='/history?tab=conversations']"
+      ],
+      "count": 1,
+      "samples": [
+        "History"
+      ]
+    },
+    "recentChatLinks": {
+      "selector": [
+        "a[href^='/c/']"
+      ],
+      "count": 10,
+      "samples": [
+        "Friendly chat initiation",
+        "Chrome Extension: Local App Bridge",
+        "植入模擬卵巢：性別與科技交錯"
+      ]
+    },
+    "messageInputArea": {
+      "selector": [
+        "[role='textbox']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "modelSelector": {
+      "selector": [
+        "button[aria-label='Model select'][data-state]"
+      ],
+      "count": 2,
+      "samples": [
+        "Fast",
+        "Fast"
+      ]
+    },
+    "voiceModeButton": {
+      "selector": [
+        "button[aria-label='Enter voice mode']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "attachButton": {
+      "selector": [
+        "button[aria-label='Attach']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "privateChatLink": {
+      "selector": [
+        "a[href='/c#private']"
+      ],
+      "count": 1,
+      "samples": [
+        "Private"
+      ]
+    },
+    "quickActionButtons": {
+      "selector": [
+        "button"
+      ],
+      "count": 32,
+      "samples": [
+        "Search⌘K",
+        "",
+        ""
+      ],
+      "fields": [
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        },
+        {
+          "deepSearch": [],
+          "createImages": [],
+          "tryProjects": []
+        }
+      ]
+    }
+  },
+  "automatorResults": {
+    "checkLoginStatus": {
+      "success": true,
+      "result": true
+    },
+    "getChatState": {
+      "success": true,
+      "result": "idle"
+    },
+    "getMessages": {
+      "success": true,
+      "result": {
+        "messages": [],
+        "count": 0
+      }
+    }
+  }
+}

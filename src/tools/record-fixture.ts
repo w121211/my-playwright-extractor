@@ -93,10 +93,43 @@ async function saveFixture(page: Page) {
   // Additional wait for any deferred rendering or animations
   await page.waitForTimeout(2000);
 
-  // Get fully rendered HTML after JavaScript execution
-  const html = await page.evaluate<string>(
-    "document.documentElement.outerHTML"
-  );
+  // Get fully rendered HTML after JavaScript execution, stripped of scripts/styles
+  const html = (await page.evaluate((() => {
+    // Clone the document to avoid modifying the live page
+    const clone = document.documentElement.cloneNode(true) as HTMLElement;
+
+    // Remove script, style, noscript, and stylesheet link tags
+    clone
+      .querySelectorAll('script, style, noscript, link[rel="stylesheet"]')
+      .forEach((el) => el.remove());
+
+    // Remove inline styles and event handler attributes
+    clone.querySelectorAll("*").forEach((el) => {
+      // Remove style attribute
+      el.removeAttribute("style");
+
+      // Remove all on* event attributes (onclick, onload, etc.)
+      Array.from(el.attributes).forEach((attr) => {
+        if (attr.name.startsWith("on")) {
+          el.removeAttribute(attr.name);
+        }
+      });
+    });
+
+    // Optional: Truncate long text nodes to reduce size
+    const truncateTextNodes = (node: Node) => {
+      if (node.nodeType === Node.TEXT_NODE && node.textContent) {
+        if (node.textContent.length > 200) {
+          node.textContent = node.textContent.substring(0, 200) + "...";
+        }
+      } else {
+        node.childNodes.forEach(truncateTextNodes);
+      }
+    };
+    truncateTextNodes(clone);
+
+    return clone.outerHTML;
+  }) as any)) as string;
   fs.writeFileSync(path.join(fixtureDir, "source.html"), html);
 
   // const ariaSnapshot = await page.locator("body").ariaSnapshot();

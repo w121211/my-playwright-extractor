@@ -1,0 +1,206 @@
+{
+  "fixture": {
+    "name": "2025-10-27T14-08-39-871Z-grok.com",
+    "url": "https://grok.com/",
+    "timestamp": "2025-10-27T14:08:39.879Z",
+    "dir": "/Users/cw/Documents/GitHub/my-playwright-extractor/tests/fixtures/2025-10-27T14-08-39-871Z-grok.com"
+  },
+  "selector": {
+    "basename": "grok-selectors-complete-1104",
+    "path": "/Users/cw/Documents/GitHub/my-playwright-extractor/tests/selectors/grok/grok-selectors-complete-1104.json",
+    "version": "1.0"
+  },
+  "automator": {
+    "class": "GrokAutomator"
+  },
+  "page": "landing",
+  "selectors": {
+    "loginIndicator": {
+      "selector": [
+        "img[alt='pfp']",
+        "button[aria-haspopup='menu'] img[alt='pfp']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "signInLink": {
+      "selector": [
+        "a[href='/sign-in']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "signUpLink": {
+      "selector": [
+        "a[href='/sign-up']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "homeLink": {
+      "selector": [
+        "a[href='/'][aria-label='Home page']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "sidebarToggle": {
+      "selector": [
+        "button[aria-label='Toggle Sidebar']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "searchButton": {
+      "selector": [
+        "button[aria-label='Search']"
+      ],
+      "count": 1,
+      "samples": [
+        "Search⌘K"
+      ]
+    },
+    "chatNavLink": {
+      "selector": [
+        "a[href='/']"
+      ],
+      "count": 2,
+      "samples": [
+        "",
+        "Chat"
+      ]
+    },
+    "voiceNavLink": {
+      "selector": [
+        "a[href='/?voice=true']"
+      ],
+      "count": 1,
+      "samples": [
+        "Voice"
+      ]
+    },
+    "imagineNavLink": {
+      "selector": [
+        "a[href='/imagine']"
+      ],
+      "count": 1,
+      "samples": [
+        "Imagine"
+      ]
+    },
+    "projectsNavLink": {
+      "selector": [
+        "a[href='/project']"
+      ],
+      "count": 1,
+      "samples": [
+        "Projects"
+      ]
+    },
+    "historyNavLink": {
+      "selector": [
+        "a[href='/history?tab=conversations']"
+      ],
+      "count": 1,
+      "samples": [
+        "History"
+      ]
+    },
+    "recentChatLinks": {
+      "selector": [
+        "a[href^='/c/']"
+      ],
+      "count": 10,
+      "samples": [
+        "鏡中試驗：女高中生夢境解析",
+        "性別轉型日記：2040醫療與適應",
+        "母體實驗的身份與倫理"
+      ]
+    },
+    "newChatButton": {
+      "selector": [
+        "a[href='/']",
+        "button:has-text('New')"
+      ],
+      "count": 2,
+      "samples": [
+        "",
+        "Chat"
+      ]
+    },
+    "messageInputArea": {
+      "selector": [
+        "[role='textbox']"
+      ],
+      "count": 0,
+      "samples": []
+    },
+    "messageSubmitButton": {
+      "selector": [
+        "button[aria-label='Submit']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "modelSelector": {
+      "selector": [
+        "button[aria-label='Model select'][data-state]"
+      ],
+      "count": 2,
+      "samples": [
+        "Auto",
+        "Auto"
+      ]
+    },
+    "voiceModeButton": {
+      "selector": [
+        "button[aria-label='Enter voice mode']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "attachButton": {
+      "selector": [
+        "button[aria-label='Attach']"
+      ],
+      "count": 1,
+      "samples": [
+        ""
+      ]
+    },
+    "privateChatLink": {
+      "selector": [
+        "a[href='/c#private']"
+      ],
+      "count": 1,
+      "samples": [
+        "Private"
+      ]
+    }
+  },
+  "automatorResults": {
+    "checkLoginStatus": {
+      "success": true,
+      "result": true
+    },
+    "getChatState": {
+      "success": true,
+      "result": "idle"
+    },
+    "getMessages": {
+      "success": true,
+      "result": {
+        "messages": [],
+        "count": 0
+      }
+    }
+  }
+}

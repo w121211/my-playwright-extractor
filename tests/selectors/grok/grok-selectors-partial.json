@@ -1,0 +1,177 @@
+{
+  "version": "1.0",
+  "site": "grok.com",
+  "status": "work-in-progress",
+  "pages": {
+    "landing": {
+      "urlGlob": "https://grok.com/",
+      "elements": {
+        "loginIndicator": {
+          "selector": [
+            "img[alt='pfp']",
+            "button[aria-haspopup='menu'] img[alt='pfp']"
+          ],
+          "hints": [
+            "Profile picture appears in top-right when logged in",
+            "Unique element with alt='pfp'",
+            "Parent button opens account menu",
+            "If absent, user is NOT logged in"
+          ]
+        },
+        "signInLink": {
+          "selector": "a[href='/sign-in']",
+          "hints": [
+            "Only present when NOT logged in",
+            "Located in top-right navigation area"
+          ]
+        },
+        "signUpLink": {
+          "selector": "a[href='/sign-up']",
+          "hints": [
+            "Only present when NOT logged in",
+            "Located in top-right navigation area"
+          ]
+        },
+        "homeLink": {
+          "selector": "a[href='/'][aria-label='Home page']",
+          "hints": [
+            "Logo link in top-left corner",
+            "Always present regardless of login state"
+          ]
+        },
+        "sidebarToggle": {
+          "selector": "button[aria-label='Toggle Sidebar']",
+          "hints": [
+            "Controls sidebar visibility",
+            "Only available when logged in"
+          ]
+        },
+        "searchButton": {
+          "selector": "button[aria-label='Search']",
+          "hints": [
+            "Opens search interface",
+            "Keyboard shortcut: ⌘K",
+            "Only available when logged in"
+          ]
+        },
+        "chatNavLink": {
+          "selector": "a[href='/']",
+          "attr": "textContent",
+          "hints": [
+            "Navigation item for Chat view",
+            "Contains text 'Chat'",
+            "Keyboard shortcut: ⌘J"
+          ]
+        },
+        "voiceNavLink": {
+          "selector": "a[href='/?voice=true']",
+          "hints": [
+            "Navigation item for Voice mode",
+            "Only available when logged in"
+          ]
+        },
+        "imagineNavLink": {
+          "selector": "a[href='/imagine']",
+          "hints": [
+            "Navigation item for image generation",
+            "Only available when logged in"
+          ]
+        },
+        "projectsNavLink": {
+          "selector": "a[href='/project']",
+          "hints": [
+            "Navigation item for Projects section",
+            "Only available when logged in"
+          ]
+        },
+        "historyNavLink": {
+          "selector": "a[href='/history?tab=conversations']",
+          "hints": [
+            "Navigation item for conversation history",
+            "Only available when logged in"
+          ]
+        },
+        "recentChatLinks": {
+          "selector": "a[href^='/c/']",
+          "attr": "textContent",
+          "hints": [
+            "Links to recent conversations in sidebar",
+            "Only available when logged in",
+            "Grouped by date (Today, Yesterday, etc.)"
+          ]
+        },
+        "messageInputArea": {
+          "selector": "[role='textbox']",
+          "hints": [
+            "Main prompt input area",
+            "Placeholder: 'What do you want to know?'",
+            "Available in both logged-in and logged-out states"
+          ]
+        },
+        "modelSelector": {
+          "selector": "button[aria-label='Model select'][data-state]",
+          "hints": [
+            "Selects AI model (e.g., Expert)",
+            "Has data-state attribute (closed/open)",
+            "Available when logged in"
+          ]
+        },
+        "voiceModeButton": {
+          "selector": "button[aria-label='Enter voice mode']",
+          "hints": [
+            "Switches to voice interaction mode",
+            "Available in both logged-in and logged-out states"
+          ]
+        },
+        "attachButton": {
+          "selector": "button[aria-label='Attach']",
+          "hints": [
+            "File attachment button",
+            "Disabled when NOT logged in (aria-label becomes 'Please login to attach files')",
+            "Enabled when logged in"
+          ]
+        },
+        "privateChatLink": {
+          "selector": "a[href='/c#private']",
+          "hints": [
+            "Switches to private chat mode",
+            "Only available when logged in"
+          ]
+        },
+        "quickActionButtons": {
+          "selector": "button",
+          "hints": [
+            "Quick action buttons: DeepSearch, Create Images, Try Projects, Voice",
+            "Text-based selection needed (no stable data attributes)",
+            "Available when logged in"
+          ],
+          "fields": {
+            "deepSearch": {
+              "selector": "button:has-text('DeepSearch')",
+              "hints": ["Triggers deep search mode"]
+            },
+            "createImages": {
+              "selector": "button:has-text('Create Images')",
+              "hints": ["Navigates to image creation"]
+            },
+            "tryProjects": {
+              "selector": "button:has-text('Try Projects')",
+              "hints": ["Opens projects feature"]
+            }
+          }
+        }
+      },
+      "hints": [
+        "Login state changes available navigation and features",
+        "Sidebar contains recent chats and projects when logged in",
+        "Most interactive features require login"
+      ]
+    }
+  },
+  "hints": [
+    "Selector priority: aria-label > href > alt > data-state",
+    "Avoid dynamic radix-generated IDs",
+    "Most Tailwind classes are unstable - prefer semantic attributes",
+    "Login detection best done via positive indicator (profile image)"
+  ]
+}

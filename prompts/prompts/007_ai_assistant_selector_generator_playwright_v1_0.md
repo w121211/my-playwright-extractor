@@ -248,35 +248,94 @@ export interface AiAssistantSiteSpec {
 
 ## Key reminders for AI agents working with web automation:
 
-1. `ref` is for reference, not for selection. The ref attribute is a temporary internal identifier for the browser tooling. It is not a stable selector and should
+### Tool & Reference Usage
+
+1. **`ref` is for reference, not for selection.** The ref attribute is a temporary internal identifier for the browser tooling. It is not a stable selector and should
    not be used for interaction or assertions across multiple steps. Treat ref as a one-time-use pointer within a single snapshot.
 
-2. Prioritize stable selectors. Always prioritize selectors in this order:
-
-   - data-testid or other custom data-\* attributes.
-   - id (if it is stable).
-   - aria-label, role, and other accessibility attributes.
-   - A combination of tag name and stable attributes (e.g., button[aria-label="Send message"]).
-   - Structural relationships (e.g., parentElement, nextElementSibling) as a last resort, and only when the surrounding structure is stable.
-
-3. Use `browser_evaluate` for complex interactions. Don't rely on a sequence of individual tools if you can accomplish the same task in a single browser_evaluate
+2. **Use `browser_evaluate` for complex interactions.** Don't rely on a sequence of individual tools if you can accomplish the same task in a single browser_evaluate
    call. For example, instead of using browser_snapshot to find an element and then browser_type to type into it, use a single browser_evaluate to find the element and
    then use JavaScript to type into it. This is more robust and less prone to errors caused by page re-renders.
 
-4. When in a loop, change your strategy. If you find yourself repeating the same action with the same tool and it's failing, don't just keep trying. The problem is
+3. **When in a loop, change your strategy.** If you find yourself repeating the same action with the same tool and it's failing, don't just keep trying. The problem is
    likely with your approach, not a temporary issue with the page. Take a step back, analyze the problem, and try a different strategy.
 
-5. Don't assume stability. Just because a selector works once doesn't mean it will work again. Always be prepared for elements to change or disappear. When
+### Selector Strategy & Stability
+
+4. **Prioritize semantic attributes over structural patterns.** `aria-label`, `alt`, `href`, and `data-*` attributes are more stable than class names or DOM structure.
+   Framework-generated classes (especially Tailwind utilities) change frequently and should be avoided.
+
+5. **Prioritize stable selectors in this order:**
+   - `data-testid` or other custom `data-*` attributes
+   - `id` (if it is stable and human-authored)
+   - `aria-label`, `role`, `alt`, and other accessibility attributes
+   - `href` for links
+   - A combination of tag name and stable attributes (e.g., `button[aria-label="Send message"]`)
+   - Structural relationships (e.g., parentElement, nextElementSibling) as a last resort, and only when the surrounding structure is stable
+
+6. **Avoid framework-generated identifiers.** Dynamic IDs like `radix-_r_2p_` or hashed class names change on every render. React/Radix/Vue/other framework internals
+   are not reliable selectors. Look for human-authored attributes instead.
+
+7. **Test for uniqueness immediately.** Use `document.querySelectorAll(selector).length` to verify uniqueness. A selector that matches multiple elements is useless
+   without additional context.
+
+8. **Fallback selectors should be independently stable.** Don't just add alternatives blindly - each fallback should work on its own. Validate that each alternative
+   is unique and reliable before including it in the selector array.
+
+### Page State & Visibility
+
+9. **Don't assume stability.** Just because a selector works once doesn't mean it will work again. Always be prepared for elements to change or disappear. When
    possible, build in fallbacks or alternative selection strategies.
 
-6. The page is a black box. Don't make assumptions about how the page is built or how it will behave. Use the tools to inspect the page and understand its structure
-   and behavior.
+10. **The page is a black box.** Don't make assumptions about how the page is built or how it will behave. Use the tools to inspect the page and understand its structure
+    and behavior.
+
+11. **Understand visibility patterns.** Many modern UIs use opacity/hover-based visibility (`opacity-0 group-hover:opacity-100`). Elements may exist in DOM but not be
+    visible/interactive. Document when elements require hover, focus, or specific states to become visible.
+
+12. **Login state dramatically changes the page.** Always explore both logged-in and logged-out states. Document what's available in each state explicitly. Some elements
+    are mutually exclusive between states.
+
+13. **Prefer positive indicators over negative ones.** Detecting the presence of elements is more reliable than detecting absence. Pages can have loading states where
+    nothing is present yet. Example: prefer "profile exists" over "sign-in link doesn't exist".
+
+14. **Some features only appear after interaction.** Submit buttons may be hidden until input has content. Navigation controls only appear when there are multiple items.
+    Don't assume an element doesn't exist just because it's not in the initial snapshot.
+
+### Language & Localization
+
+15. **Language-dependent attributes need special handling.** `aria-label` values in the DOM are typically in one language (often English in codebase), while placeholder
+    text and visible labels may be localized. Always note in hints when a selector uses language-specific text.
+
+### Message Structure in Chat UIs
+
+16. **Message structure in chat UIs is often unstructured.** Unlike traditional forms, chat messages rarely have `data-testid` or semantic containers. Need to identify
+    messages by surrounding action buttons (Edit, Copy) or content patterns. Document this lack of structure in hints.
+
+### Validation & Documentation
+
+17. **Validate in realistic scenarios.** Take snapshots at different stages: empty state, after typing, after response, with errors. Check if selectors work across
+    different conversation types (new chat vs existing). Test edge cases.
+
+18. **Document conditional visibility explicitly.** Note when elements require: login, hover, specific state, or user action. This helps downstream automation know when
+    to expect elements. Use hints to capture operational context, not just technical details.
+
+### Collaboration & Problem-Solving
+
+19. **Work with the human, not alone.** If you encounter problems, ambiguity, or uncertainty, STOP and ask for help. Don't continue working in isolation when:
+    - Login is required but you can't proceed (ask human to log in)
+    - Page structure is unclear or ambiguous (ask for clarification)
+    - Elements can't be found after multiple attempts (ask human to verify page state)
+    - Multiple valid approaches exist (ask human for preference)
+    - Site behavior is unexpected or inconsistent (ask human to confirm what they see)
+
+    Collaboration produces better results than autonomous guessing. The human has context you don't have.
 
 ---
 
 # User Request
 
-**Target AI Assistant Website:** https://chatgpt.com/
+**Target AI Assistant Website:** https://grok.com/
 
 **Additional Information:**
 

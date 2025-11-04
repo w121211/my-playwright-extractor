@@ -1,0 +1,380 @@
+{
+  "version": "1.0",
+  "site": "grok.com",
+  "pages": {
+    "landing": {
+      "urlGlob": "https://grok.com/",
+      "elements": {
+        "loginIndicator": {
+          "selector": [
+            "img[alt='pfp']",
+            "button[aria-haspopup='menu'] img[alt='pfp']"
+          ],
+          "hints": [
+            "Profile picture appears in top-right when logged in",
+            "Unique element with alt='pfp'",
+            "Parent button opens account menu",
+            "If absent, user is NOT logged in"
+          ]
+        },
+        "signInLink": {
+          "selector": "a[href='/sign-in']",
+          "hints": [
+            "Only present when NOT logged in",
+            "Located in top-right navigation area"
+          ]
+        },
+        "signUpLink": {
+          "selector": "a[href='/sign-up']",
+          "hints": [
+            "Only present when NOT logged in",
+            "Located in top-right navigation area"
+          ]
+        },
+        "homeLink": {
+          "selector": "a[href='/'][aria-label='Home page']",
+          "hints": [
+            "Logo link in top-left corner",
+            "Always present regardless of login state"
+          ]
+        },
+        "sidebarToggle": {
+          "selector": "button[aria-label='Toggle Sidebar']",
+          "hints": [
+            "Controls sidebar visibility",
+            "Only available when logged in"
+          ]
+        },
+        "searchButton": {
+          "selector": "button[aria-label='Search']",
+          "hints": [
+            "Opens search interface",
+            "Keyboard shortcut: ⌘K",
+            "Only available when logged in"
+          ]
+        },
+        "chatNavLink": {
+          "selector": "a[href='/']",
+          "attr": "textContent",
+          "hints": [
+            "Navigation item for Chat view",
+            "Multiple matches possible - filter by text 'Chat'",
+            "Keyboard shortcut: ⌘J"
+          ]
+        },
+        "voiceNavLink": {
+          "selector": "a[href='/?voice=true']",
+          "hints": [
+            "Navigation item for Voice mode",
+            "Only available when logged in"
+          ]
+        },
+        "imagineNavLink": {
+          "selector": "a[href='/imagine']",
+          "hints": [
+            "Navigation item for image generation",
+            "Only available when logged in"
+          ]
+        },
+        "projectsNavLink": {
+          "selector": "a[href='/project']",
+          "hints": [
+            "Navigation item for Projects section",
+            "Only available when logged in"
+          ]
+        },
+        "historyNavLink": {
+          "selector": "a[href='/history?tab=conversations']",
+          "hints": [
+            "Navigation item for conversation history",
+            "Only available when logged in"
+          ]
+        },
+        "recentChatLinks": {
+          "selector": "a[href^='/c/']",
+          "attr": "textContent",
+          "hints": [
+            "Links to recent conversations in sidebar",
+            "Only available when logged in",
+            "Grouped by date (Today, Yesterday, etc.)"
+          ]
+        },
+        "newChatButton": {
+          "selector": [
+            "a[href='/']",
+            "button:has-text('New')"
+          ],
+          "hints": [
+            "Navigate to home URL (/) to start new chat",
+            "No dedicated 'New Chat' button - home link serves this purpose"
+          ]
+        },
+        "messageInputArea": {
+          "selector": "[role='textbox']",
+          "hints": [
+            "Main prompt input area",
+            "Placeholder: 'What do you want to know?' or 'How can Grok help?'",
+            "Available in both logged-in and logged-out states",
+            "contenteditable='true' attribute"
+          ]
+        },
+        "messageSubmitButton": {
+          "selector": "button[aria-label='Submit']",
+          "hints": [
+            "Submit/send message button",
+            "Located near message input area",
+            "May only be visible/enabled when input has content"
+          ]
+        },
+        "modelSelector": {
+          "selector": "button[aria-label='Model select'][data-state]",
+          "hints": [
+            "Selects AI model (e.g., Expert)",
+            "Has data-state attribute (closed/open)",
+            "Available when logged in"
+          ]
+        },
+        "voiceModeButton": {
+          "selector": "button[aria-label='Enter voice mode']",
+          "hints": [
+            "Switches to voice interaction mode",
+            "Available in both logged-in and logged-out states"
+          ]
+        },
+        "attachButton": {
+          "selector": "button[aria-label='Attach']",
+          "hints": [
+            "File attachment button",
+            "Disabled when NOT logged in (aria-label becomes 'Please login to attach files')",
+            "Enabled when logged in"
+          ]
+        },
+        "privateChatLink": {
+          "selector": "a[href='/c#private']",
+          "hints": [
+            "Switches to private chat mode",
+            "Only available when logged in"
+          ]
+        }
+      },
+      "hints": [
+        "Login state changes available navigation and features",
+        "Sidebar contains recent chats and projects when logged in",
+        "Most interactive features require login"
+      ]
+    },
+    "chat": {
+      "urlGlob": "https://grok.com/c/**",
+      "elements": {
+        "messageBlocks": {
+          "selector": "main > div:nth-child(2) > div > div",
+          "hints": [
+            "Conversation messages in main > second div > nested divs",
+            "First child of main is navigation bar, second child contains conversation",
+            "Each message pair (user + AI) is in a separate container",
+            "User messages have Edit/Copy buttons, AI messages have Regenerate/Like/Dislike buttons"
+          ],
+          "fields": {
+            "userMessage": {
+              "selector": "div.bg-surface-l1.border.border-border-l1 span.whitespace-pre-wrap",
+              "attr": "textContent",
+              "hints": [
+                "User messages are in divs with bg-surface-l1 class",
+                "Actual text is in span.whitespace-pre-wrap",
+                "Has border-border-l1 class for styling",
+                "Followed by Edit/Copy buttons"
+              ]
+            },
+            "aiMessage": {
+              "selector": "p[dir='auto'].break-words",
+              "attr": "textContent",
+              "hints": [
+                "AI responses are in p tags with dir='auto' and class 'break-words'",
+                "Has style 'white-space: pre-wrap'",
+                "Container has prose classes for markdown rendering",
+                "Followed by action buttons (Regenerate, Like, Dislike, etc.)"
+              ]
+            },
+            "thoughtIndicator": {
+              "selector": "span.truncate",
+              "attr": "textContent",
+              "hints": [
+                "Shows AI thinking time as 'Thought for Xs'",
+                "Pattern: /Thought for \\d+s/",
+                "Only appears on AI responses with deep thinking enabled"
+              ]
+            }
+          }
+        },
+        "aiGeneratingIndicator": {
+          "selector": [
+            "span:has-text('Thought for')",
+            "[aria-label*='generating']",
+            "[class*='spinner']"
+          ],
+          "hints": [
+            "Shows when AI is processing/generating response",
+            "May show as 'Thought for' text or loading spinner",
+            "Disappears when generation complete"
+          ]
+        },
+        "messageInputArea": {
+          "selector": "[role='textbox']",
+          "hints": [
+            "Same as landing page",
+            "Placeholder: 'How can Grok help?'",
+            "Located at bottom of conversation"
+          ]
+        },
+        "messageSubmitButton": {
+          "selector": "button[aria-label='Submit']",
+          "hints": [
+            "Submit button for sending messages",
+            "Located near input area"
+          ]
+        },
+        "editButton": {
+          "selector": "button[aria-label='Edit']",
+          "hints": [
+            "Edits user message",
+            "Appears on hover over user messages",
+            "Multiple instances (one per user message)"
+          ]
+        },
+        "copyButton": {
+          "selector": "button[aria-label='Copy']",
+          "hints": [
+            "Copies message content to clipboard",
+            "Available for both user and AI messages",
+            "May have opacity-based visibility (appears on hover)"
+          ]
+        },
+        "regenerateButton": {
+          "selector": "button[aria-label='Regenerate']",
+          "hints": [
+            "Regenerates AI response",
+            "Only appears on AI message action bars",
+            "Visible on hover or for last response"
+          ]
+        },
+        "readAloudButton": {
+          "selector": "button[aria-label='Read Aloud']",
+          "hints": [
+            "Text-to-speech for AI responses",
+            "Only on AI messages"
+          ]
+        },
+        "likeButton": {
+          "selector": "button[aria-label='Like']",
+          "hints": [
+            "Thumbs up feedback for AI response",
+            "Appears on hover or for last response"
+          ]
+        },
+        "dislikeButton": {
+          "selector": "button[aria-label='Dislike']",
+          "hints": [
+            "Thumbs down feedback for AI response",
+            "Appears on hover or for last response"
+          ]
+        },
+        "shareButton": {
+          "selector": "button[aria-label='Create share link']",
+          "hints": [
+            "Creates shareable link to conversation or message",
+            "Available in conversation header and message action bars"
+          ]
+        },
+        "startThreadButton": {
+          "selector": "button[aria-label='Start thread']",
+          "hints": [
+            "Creates a new thread from a message",
+            "Available on AI response action bars"
+          ]
+        },
+        "moreActionsButton": {
+          "selector": "button[aria-label='More actions']",
+          "hints": [
+            "Opens menu with additional message actions",
+            "Available on AI messages"
+          ]
+        },
+        "moreButton": {
+          "selector": "button[aria-label='More']",
+          "hints": [
+            "Conversation-level options menu",
+            "Located in conversation header"
+          ]
+        },
+        "previousMessageButton": {
+          "selector": "button[aria-label='Navigate to previous message']",
+          "hints": [
+            "Navigates to previous message in thread",
+            "Disabled when at first message"
+          ]
+        },
+        "nextMessageButton": {
+          "selector": "button[aria-label='Navigate to next message']",
+          "hints": [
+            "Navigates to next message in thread",
+            "Disabled when at last message"
+          ]
+        },
+        "goToResponseButton": {
+          "selector": "button[aria-label='Go to response']",
+          "hints": [
+            "Jumps to specific AI response in conversation",
+            "Multiple instances for conversations with multiple responses",
+            "Part of message navigation UI"
+          ]
+        },
+        "modelSelector": {
+          "selector": "button[aria-label='Model select'][data-state]",
+          "hints": [
+            "Same as landing page",
+            "Located near message input"
+          ]
+        },
+        "attachButton": {
+          "selector": "button[aria-label='Attach']",
+          "hints": [
+            "Same as landing page",
+            "Located near message input"
+          ]
+        },
+        "voiceModeButton": {
+          "selector": "button[aria-label='Enter voice mode']",
+          "hints": [
+            "Same as landing page",
+            "Located near message input"
+          ]
+        },
+        "recentChatLinks": {
+          "selector": "a[href^='/c/']",
+          "attr": "textContent",
+          "hints": [
+            "Same as landing page",
+            "Available in sidebar when logged in"
+          ]
+        }
+      },
+      "hints": [
+        "Message structure lacks stable data attributes",
+        "Action buttons appear/disappear based on hover and message position",
+        "Use aria-label for reliable button identification",
+        "Last response has special visibility rules for action buttons",
+        "User messages: div.bg-surface-l1 with span.whitespace-pre-wrap",
+        "AI messages: p[dir='auto'].break-words with white-space: pre-wrap style",
+        "Main structure: main > nav (1st child) + conversation container (2nd child)"
+      ]
+    }
+  },
+  "hints": [
+    "Selector priority: aria-label > href > alt > data-state",
+    "Avoid dynamic radix-generated IDs (pattern: radix-_r_XXX_)",
+    "Most Tailwind classes are unstable - prefer semantic attributes",
+    "Login detection best done via positive indicator (profile image with alt='pfp')",
+    "Many interactive elements use opacity-based visibility on hover",
+    "aria-label attributes are stable and language-independent (use English values)"
+  ]
+}
