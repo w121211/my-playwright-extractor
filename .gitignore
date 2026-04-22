@@ -149,3 +149,5 @@ node_modules/
 
 # This app
 tests/fixtures/*
+.playwright-mcp
+.playwright-chrome-profile

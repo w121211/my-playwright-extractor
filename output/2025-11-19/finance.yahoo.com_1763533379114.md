@@ -1,0 +1,1136 @@
+---
+title: "Yahoo Finance - Stock Market Live, Quotes, Business & Finance News"
+url: "https://finance.yahoo.com/"
+domain: "finance.yahoo.com"
+capturedAt: "2025-11-19T06:22:59.112Z"
+---
+
+- generic [active] [ref=e1]:
+  - iframe [ref=e4]:
+    - generic [ref=f1e2]:
+      - iframe [ref=f1e5]:
+        - img [ref=f2e15] [cursor=pointer]
+      - generic [ref=f1e6]:
+        - generic:
+          - img [ref=f1e10] [cursor=pointer]
+          - button [ref=f1e12] [cursor=pointer]:
+            - img [ref=f1e13]
+  - generic [ref=e5]:
+    - link "Skip to navigation":
+      - /url: "#ybar-navigation"
+    - link "Skip to main content":
+      - /url: "#nimbus-app"
+    - link "Skip to right column":
+      - /url: "#right-rail"
+    - banner [ref=e6]:
+      - generic [ref=e7]:
+        - banner [ref=e8]:
+          - generic [ref=e11]:
+            - generic [ref=e12]:
+              - generic [ref=e13]:
+                - heading "Yahoo Finance" [level=1] [ref=e14]
+                - link "Yahoo Finance" [ref=e15] [cursor=pointer]:
+                  - /url: https://finance.yahoo.com/
+                  - img [ref=e16]
+                  - text: Yahoo Finance
+              - search [ref=e20]:
+                - generic [ref=e21]: Search query
+                - textbox "Search query" [ref=e22]:
+                  - /placeholder: Search for news, tickers or companies
+                - generic:
+                  - img
+                - button "Search" [ref=e24] [cursor=pointer]:
+                  - img [ref=e25]
+            - navigation [ref=e28]:
+              - list [ref=e29]:
+                - listitem [ref=e30]:
+                  - link "News" [ref=e31] [cursor=pointer]:
+                    - /url: https://www.yahoo.com/
+                - listitem [ref=e32]:
+                  - link "Finance" [ref=e33] [cursor=pointer]:
+                    - /url: https://finance.yahoo.com/
+                - listitem [ref=e34]:
+                  - link "Sports" [ref=e35] [cursor=pointer]:
+                    - /url: https://sports.yahoo.com/
+                - listitem [ref=e36]:
+                  - button "More" [ref=e37] [cursor=pointer]:
+                    - generic [ref=e38]: More
+                    - img [ref=e39]
+            - toolbar [ref=e41]:
+              - generic [ref=e43]:
+                - checkbox "Notifications" [disabled] [ref=e44]
+                - img [ref=e46]
+              - link "Check your mail" [ref=e51] [cursor=pointer]:
+                - /url: https://mail.yahoo.com/
+                - img [ref=e52]
+                - generic [ref=e55]: Mail
+              - link "Sign in" [ref=e59] [cursor=pointer]:
+                - /url: https://login.yahoo.com/?.lang=en-US&src=finance&.done=https%3A%2F%2Ffinance.yahoo.com%2F&pspid=1183300002&activity=ybar-signin
+        - navigation "Navigation" [ref=e60]:
+          - menubar "Navigation menubar" [ref=e61]:
+            - menuitem "My Portfolio" [ref=e62] [cursor=pointer]:
+              - generic [ref=e63]: My Portfolio
+            - menuitem "News" [ref=e64] [cursor=pointer]:
+              - generic [ref=e65]: News
+            - menuitem "Markets" [ref=e66] [cursor=pointer]:
+              - generic [ref=e67]: Markets
+            - menuitem "Research" [ref=e68] [cursor=pointer]:
+              - generic [ref=e69]: Research
+            - menuitem "Personal Finance" [ref=e70] [cursor=pointer]:
+              - generic [ref=e71]: Personal Finance
+            - menuitem "Videos" [ref=e72] [cursor=pointer]:
+              - generic [ref=e73]: Videos
+            - menuitem "Watch Now" [ref=e74] [cursor=pointer]:
+              - generic [ref=e75]: Watch Now
+            - menuitem "Invest 2025" [ref=e76] [cursor=pointer]:
+              - generic [ref=e77]: Invest 2025
+    - main [ref=e78]:
+      - generic [ref=e80]:
+        - complementary "Left navigation"
+        - generic [ref=e81]:
+          - generic [ref=e82]:
+            - generic [ref=e84]:
+              - generic [ref=e85]:
+                - generic [ref=e86]:
+                  - link "US stock futures slide as Wall Street awaits Nvidia earnings" [ref=e87] [cursor=pointer]:
+                    - /url: https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-futures-slide-as-wall-street-awaits-nvidia-earnings-233634242.html
+                    - img "Stock futures traded mostly steady as traders prepared for Nvidia earnings, following several days of losses." [ref=e88]
+                  - generic [ref=e89]:
+                    - link "US stock futures slide as Wall Street awaits Nvidia earnings Stock futures traded mostly steady as traders prepared for Nvidia earnings, following several days of losses." [ref=e90] [cursor=pointer]:
+                      - /url: https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-futures-slide-as-wall-street-awaits-nvidia-earnings-233634242.html
+                      - generic [ref=e91]:
+                        - heading "US stock futures slide as Wall Street awaits Nvidia earnings" [level=2] [ref=e92]
+                        - paragraph [ref=e93]: Stock futures traded mostly steady as traders prepared for Nvidia earnings, following several days of losses.
+                    - generic [ref=e94]:
+                      - generic [ref=e95]:
+                        - generic [ref=e96]:
+                          - img [ref=e98]
+                          - generic [ref=e100]: LIVE
+                        - generic [ref=e101]: Yahoo Finance
+                      - generic [ref=e102]:
+                        - generic [ref=e103]:
+                          - link "NVDA" [ref=e104] [cursor=pointer]:
+                            - /url: /quote/NVDA/
+                            - generic [ref=e106]: NVDA
+                            - generic [ref=e108]: "-2.81%"
+                          - button "Follow" [ref=e111] [cursor=pointer]:
+                            - img [ref=e113]
+                        - generic [ref=e115]:
+                          - link "YM=F" [ref=e116] [cursor=pointer]:
+                            - /url: /quote/YM%3DF/
+                            - generic [ref=e118]: YM=F
+                            - generic [ref=e120]: "-0.08%"
+                          - button "Follow" [ref=e123] [cursor=pointer]:
+                            - img [ref=e125]
+                - list [ref=e128]:
+                  - listitem [ref=e129]:
+                    - article [ref=e130]:
+                      - link "US unemployment rolls swelled between mid-September, October" [ref=e131] [cursor=pointer]:
+                        - /url: https://finance.yahoo.com/news/us-home-builder-sentiment-subdued-150446133.html
+                        - img "US unemployment rolls swelled between mid-September, October" [ref=e133]
+                      - generic [ref=e134]:
+                        - link "US unemployment rolls swelled between mid-September, October" [ref=e135] [cursor=pointer]:
+                          - /url: https://finance.yahoo.com/news/us-home-builder-sentiment-subdued-150446133.html
+                          - heading "US unemployment rolls swelled between mid-September, October" [level=3] [ref=e136]
+                        - generic [ref=e138]:
+                          - text: Reuters
+                          - generic [ref=e139]: •
+                          - text: 19m ago
+                  - listitem [ref=e140]:
+                    - article [ref=e141]:
+                      - link "AI stock rally to overcome bubble concerns, Fidelity says" [ref=e142] [cursor=pointer]:
+                        - /url: https://finance.yahoo.com/news/ai-stock-rally-overcome-bubble-000145196.html
+                        - img "AI stock rally to overcome bubble concerns, Fidelity says" [ref=e144]
+                      - generic [ref=e145]:
+                        - link "AI stock rally to overcome bubble concerns, Fidelity says" [ref=e146] [cursor=pointer]:
+                          - /url: https://finance.yahoo.com/news/ai-stock-rally-overcome-bubble-000145196.html
+                          - heading "AI stock rally to overcome bubble concerns, Fidelity says" [level=3] [ref=e147]
+                        - generic [ref=e148]:
+                          - generic [ref=e149]:
+                            - text: Bloomberg
+                            - generic [ref=e150]: •
+                            - text: 4h ago
+                          - generic [ref=e152]:
+                            - link "NVDA" [ref=e153] [cursor=pointer]:
+                              - /url: /quote/NVDA/
+                              - generic [ref=e155]: NVDA
+                              - generic [ref=e157]: "-2.81%"
+                            - button "Follow" [ref=e159] [cursor=pointer]:
+                              - img [ref=e161]
+              - generic [ref=e163]:
+                - generic [ref=e164]:
+                  - list [ref=e165]:
+                    - listitem [ref=e166]:
+                      - article [ref=e167]:
+                        - link "Wall Street braces for Nvidia earnings" [ref=e168] [cursor=pointer]:
+                          - /url: https://finance.yahoo.com/news/nvidia-to-report-high-stakes-q3-earnings-amid-investor-concerns-of-ai-overbuilding-153409342.html
+                          - img "Wall Street braces for Nvidia earnings" [ref=e170]
+                        - generic [ref=e171]:
+                          - link "Wall Street braces for Nvidia earnings" [ref=e172] [cursor=pointer]:
+                            - /url: https://finance.yahoo.com/news/nvidia-to-report-high-stakes-q3-earnings-amid-investor-concerns-of-ai-overbuilding-153409342.html
+                            - heading "Wall Street braces for Nvidia earnings" [level=3] [ref=e173]
+                          - generic [ref=e174]:
+                            - generic [ref=e175]:
+                              - text: Yahoo Finance
+                              - generic [ref=e176]: •
+                              - text: 19m ago
+                            - generic [ref=e177]:
+                              - generic [ref=e178]:
+                                - link "NVDA" [ref=e179] [cursor=pointer]:
+                                  - /url: /quote/NVDA/
+                                  - generic [ref=e181]: NVDA
+                                  - generic [ref=e182]: "-2.81%"
+                                - button "Follow" [ref=e185] [cursor=pointer]:
+                                  - img [ref=e187]
+                              - generic [ref=e189]:
+                                - link "AMD" [ref=e190] [cursor=pointer]:
+                                  - /url: /quote/AMD/
+                                  - generic [ref=e192]: AMD
+                                  - generic [ref=e193]: "-4.25%"
+                                - button "Follow" [ref=e196] [cursor=pointer]:
+                                  - img [ref=e198]
+                    - listitem [ref=e200]:
+                      - article [ref=e201]:
+                        - generic [ref=e202]:
+                          - link "Malaysian utility firm loses over $1 billion in crypto power theft" [ref=e203] [cursor=pointer]:
+                            - /url: https://finance.yahoo.com/news/malaysias-tenaga-nasional-incurs-losses-053819423.html
+                            - heading "Malaysian utility firm loses over $1 billion in crypto power theft" [level=3] [ref=e204]
+                          - generic [ref=e205]:
+                            - generic [ref=e206]:
+                              - text: Reuters
+                              - generic [ref=e207]: •
+                              - text: 44m ago
+                            - generic [ref=e208]:
+                              - generic [ref=e209]:
+                                - link "5347.KL" [ref=e210] [cursor=pointer]:
+                                  - /url: /quote/5347.KL/
+                                  - generic [ref=e212]: 5347.KL
+                                  - generic [ref=e214]: 0.00%
+                                - button "Follow" [ref=e217] [cursor=pointer]:
+                                  - img [ref=e219]
+                              - generic [ref=e221]:
+                                - link "BTC-USD" [ref=e222] [cursor=pointer]:
+                                  - /url: /quote/BTC-USD/
+                                  - generic [ref=e224]: BTC-USD
+                                  - generic [ref=e226]: +0.54%
+                                - button "Follow" [ref=e229] [cursor=pointer]:
+                                  - img [ref=e231]
+                    - listitem [ref=e233]:
+                      - article [ref=e234]:
+                        - generic [ref=e235]:
+                          - link "Trump hints he knows Fed chair pick, may 'go the standard way'" [ref=e236] [cursor=pointer]:
+                            - /url: https://finance.yahoo.com/news/trump-says-he-thinks-he-knows-his-choice-for-the-next-fed-chair-211141859.html
+                            - heading "Trump hints he knows Fed chair pick, may 'go the standard way'" [level=3] [ref=e237]
+                          - generic [ref=e238]:
+                            - generic [ref=e239]:
+                              - text: Yahoo Finance
+                              - generic [ref=e240]: •
+                              - text: 19m ago
+                            - generic [ref=e241]:
+                              - generic [ref=e242]:
+                                - link "6701.T" [ref=e243] [cursor=pointer]:
+                                  - /url: /quote/6701.T/
+                                  - generic [ref=e245]: 6701.T
+                                  - generic [ref=e247]: +2.94%
+                                - button "Follow" [ref=e250] [cursor=pointer]:
+                                  - img [ref=e252]
+                              - generic [ref=e254]:
+                                - link "BLK" [ref=e255] [cursor=pointer]:
+                                  - /url: /quote/BLK/
+                                  - generic [ref=e257]: BLK
+                                  - generic [ref=e259]: "-0.46%"
+                                - button "Follow" [ref=e261] [cursor=pointer]:
+                                  - img [ref=e263]
+                    - listitem [ref=e265]:
+                      - article [ref=e266]:
+                        - generic [ref=e267]:
+                          - link "European magnet maker warns of rare earth crisis without action" [ref=e268] [cursor=pointer]:
+                            - /url: https://finance.yahoo.com/news/european-magnet-maker-warns-rare-050755323.html
+                            - heading "European magnet maker warns of rare earth crisis without action" [level=3] [ref=e269]
+                          - generic [ref=e271]:
+                            - text: Bloomberg
+                            - generic [ref=e272]: •
+                            - text: 1h ago
+                    - listitem [ref=e273]:
+                      - article [ref=e274]:
+                        - generic [ref=e275]:
+                          - link "China halts Japanese seafood imports as diplomatic spat worsens" [ref=e276] [cursor=pointer]:
+                            - /url: https://finance.yahoo.com/news/chinese-diplomat-dissatisfied-japan-talks-000859056.html
+                            - heading "China halts Japanese seafood imports as diplomatic spat worsens" [level=3] [ref=e277]
+                          - generic [ref=e279]:
+                            - text: Bloomberg
+                            - generic [ref=e280]: •
+                            - text: 1h ago
+                    - listitem [ref=e281]:
+                      - article [ref=e282]:
+                        - generic [ref=e283]:
+                          - link "Elon Musk, Jensen Huang to talk AI at US-Saudi investment forum" [ref=e284] [cursor=pointer]:
+                            - /url: https://finance.yahoo.com/news/elon-musk-jensen-huang-talk-022233856.html
+                            - heading "Elon Musk, Jensen Huang to talk AI at US-Saudi investment forum" [level=3] [ref=e285]
+                          - generic [ref=e286]:
+                            - generic [ref=e287]:
+                              - text: Reuters
+                              - generic [ref=e288]: •
+                              - text: 4h ago
+                            - generic [ref=e289]:
+                              - generic [ref=e290]:
+                                - link "TSLA" [ref=e291] [cursor=pointer]:
+                                  - /url: /quote/TSLA/
+                                  - generic [ref=e293]: TSLA
+                                  - generic [ref=e295]: "-1.88%"
+                                - button "Follow" [ref=e297] [cursor=pointer]:
+                                  - img [ref=e299]
+                              - generic [ref=e301]:
+                                - link "NVDA" [ref=e302] [cursor=pointer]:
+                                  - /url: /quote/NVDA/
+                                  - generic [ref=e304]: NVDA
+                                  - generic [ref=e306]: "-2.81%"
+                                - button "Follow" [ref=e308] [cursor=pointer]:
+                                  - img [ref=e310]
+                    - listitem [ref=e312]:
+                      - article [ref=e313]:
+                        - generic [ref=e314]:
+                          - link "Xi is making China's premier his top messenger on world stage" [ref=e315] [cursor=pointer]:
+                            - /url: https://finance.yahoo.com/news/xi-making-china-premier-top-220000634.html
+                            - heading "Xi is making China's premier his top messenger on world stage" [level=3] [ref=e316]
+                          - generic [ref=e317]:
+                            - generic [ref=e318]:
+                              - text: Bloomberg
+                              - generic [ref=e319]: •
+                              - text: 8h ago
+                            - generic [ref=e321]:
+                              - link "HG=F" [ref=e322] [cursor=pointer]:
+                                - /url: /quote/HG%3DF/
+                                - generic [ref=e324]: HG=F
+                                - generic [ref=e326]: +0.37%
+                              - button "Follow" [ref=e328] [cursor=pointer]:
+                                - img [ref=e330]
+                  - link "View More" [ref=e333] [cursor=pointer]:
+                    - /url: /news
+                    - text: View More
+                    - img [ref=e335]
+                - generic [ref=e337]:
+                  - heading "Latest" [level=3] [ref=e338]
+                  - list [ref=e339]:
+                    - listitem [ref=e340]:
+                      - article [ref=e341]:
+                        - generic [ref=e342]:
+                          - link "US unemployment rolls swelled between mid-September and mid-October" [ref=e343] [cursor=pointer]:
+                            - /url: https://finance.yahoo.com/news/us-home-builder-sentiment-subdued-150446133.html
+                            - heading "US unemployment rolls swelled between mid-September and mid-October" [level=3] [ref=e344]
+                          - generic [ref=e346]:
+                            - text: Reuters
+                            - generic [ref=e347]: •
+                            - text: 19m ago
+                    - listitem [ref=e348]:
+                      - article [ref=e349]:
+                        - generic [ref=e350]:
+                          - link "Brookfield seeks $10 billion for new AI infrastructure fund, WSJ reports" [ref=e351] [cursor=pointer]:
+                            - /url: https://finance.yahoo.com/news/brookfield-seeks-10-billion-ai-055746643.html
+                            - heading "Brookfield seeks $10 billion for new AI infrastructure fund, WSJ reports" [level=3] [ref=e352]
+                          - generic [ref=e353]:
+                            - generic [ref=e354]:
+                              - text: Reuters
+                              - generic [ref=e355]: •
+                              - text: 25m ago
+                            - generic [ref=e356]:
+                              - generic [ref=e357]:
+                                - link "BAM.TO" [ref=e358] [cursor=pointer]:
+                                  - /url: /quote/BAM.TO/
+                                  - generic [ref=e360]: BAM.TO
+                                  - generic [ref=e361]: +0.43%
+                                - button "Follow" [ref=e364] [cursor=pointer]:
+                                  - img [ref=e366]
+                              - generic [ref=e368]:
+                                - link "NVDA" [ref=e369] [cursor=pointer]:
+                                  - /url: /quote/NVDA/
+                                  - generic [ref=e371]: NVDA
+                                  - generic [ref=e372]: "-2.81%"
+                                - button "Follow" [ref=e375] [cursor=pointer]:
+                                  - img [ref=e377]
+                    - listitem [ref=e379]:
+                      - article [ref=e380]:
+                        - generic [ref=e381]:
+                          - link "India's Fractal Analytics bets heavily on R&D in AI race ahead of IPO" [ref=e382] [cursor=pointer]:
+                            - /url: https://finance.yahoo.com/news/indias-fractal-analytics-bets-heavily-054109406.html
+                            - heading "India's Fractal Analytics bets heavily on R&D in AI race ahead of IPO" [level=3] [ref=e383]
+                          - generic [ref=e385]:
+                            - text: Reuters
+                            - generic [ref=e386]: •
+                            - text: 41m ago
+                    - listitem [ref=e387]:
+                      - article [ref=e388]:
+                        - generic [ref=e389]:
+                          - link "Malaysia's Tenaga Nasional incurs losses of more than $1 billion from crypto power theft" [ref=e390] [cursor=pointer]:
+                            - /url: https://finance.yahoo.com/news/malaysias-tenaga-nasional-incurs-losses-053819423.html
+                            - heading "Malaysia's Tenaga Nasional incurs losses of more than $1 billion from crypto power theft" [level=3] [ref=e391]
+                          - generic [ref=e392]:
+                            - generic [ref=e393]:
+                              - text: Reuters
+                              - generic [ref=e394]: •
+                              - text: 44m ago
+                            - generic [ref=e395]:
+                              - generic [ref=e396]:
+                                - link "5347.KL" [ref=e397] [cursor=pointer]:
+                                  - /url: /quote/5347.KL/
+                                  - generic [ref=e399]: 5347.KL
+                                  - generic [ref=e401]: 0.00%
+                                - button "Follow" [ref=e404] [cursor=pointer]:
+                                  - img [ref=e406]
+                              - generic [ref=e408]:
+                                - link "BTC-USD" [ref=e409] [cursor=pointer]:
+                                  - /url: /quote/BTC-USD/
+                                  - generic [ref=e411]: BTC-USD
+                                  - generic [ref=e413]: +0.54%
+                                - button "Follow" [ref=e415] [cursor=pointer]:
+                                  - img [ref=e417]
+                    - listitem [ref=e419]:
+                      - article [ref=e420]:
+                        - generic [ref=e421]:
+                          - link "Faith-based tech platform Gloo raises $72.8 million in US IPO" [ref=e422] [cursor=pointer]:
+                            - /url: https://finance.yahoo.com/news/faith-based-tech-platform-gloo-053613019.html
+                            - heading "Faith-based tech platform Gloo raises $72.8 million in US IPO" [level=3] [ref=e423]
+                          - generic [ref=e425]:
+                            - text: Reuters
+                            - generic [ref=e426]: •
+                            - text: 46m ago
+                    - listitem [ref=e427]:
+                      - article [ref=e428]:
+                        - generic [ref=e429]:
+                          - link "US Plans to Approve Sale of Chips to Saudi AI Venture Humain" [ref=e430] [cursor=pointer]:
+                            - /url: https://finance.yahoo.com/news/us-plans-approve-sale-chips-232752516.html
+                            - heading "US Plans to Approve Sale of Chips to Saudi AI Venture Humain" [level=3] [ref=e431]
+                          - generic [ref=e433]:
+                            - text: Bloomberg
+                            - generic [ref=e434]: •
+                            - text: 1h ago
+                    - listitem [ref=e435]:
+                      - article [ref=e436]:
+                        - generic [ref=e437]:
+                          - link "European Magnet Maker Warns of Rare Earth Crisis Without Action" [ref=e438] [cursor=pointer]:
+                            - /url: https://finance.yahoo.com/news/european-magnet-maker-warns-rare-050755323.html
+                            - heading "European Magnet Maker Warns of Rare Earth Crisis Without Action" [level=3] [ref=e439]
+                          - generic [ref=e441]:
+                            - text: Bloomberg
+                            - generic [ref=e442]: •
+                            - text: 1h ago
+                    - listitem [ref=e443]:
+                      - link "試試這款遊戲，看看為什麼大家都為之瘋狂！ Hero Wars in Taboola advertising section • Taboola Disclosure" [ref=e451] [cursor=pointer]:
+                        - /url: https://nexters.g2afse.com/click
+                        - generic [ref=e452]:
+                          - link "試試這款遊戲，看看為什麼大家都為之瘋狂！" [ref=e453]
+                          - generic [ref=e454]:
+                            - link "Hero Wars in Taboola advertising section" [ref=e455]: Hero Wars
+                            - generic [ref=e456]: •
+                            - link "Taboola Disclosure" [ref=e458]:
+                              - /url: "https://popup.taboola.com/en/?template=colorbox&utm_source=yahoo-finances&utm_medium=referral&utm_content=stream-g-neo-v3:taboola-stream-latest:"
+                              - text: Ad
+            - generic [ref=e460]:
+              - generic [ref=e461]:
+                - iframe [ref=e466]:
+                  - region "Video Player" [ref=f3e4]:
+                    - generic "This strategist anticipates a market correction over an AI bubble" [ref=f3e5]
+                    - generic:
+                      - generic: This strategist anticipates a market correction over an AI bubble
+                      - generic: While US stocks (^DJI, ^IXIC, ^GSPC) are on pace for another day of losses, Empower Chief Investment Strategist Marta Norton believes the market is due for a correction as concerns about the AI bubble permeate Wall Street. Nvidia (NVDA) is scheduled to release its third quarter earnings results on Wednesday, November 19. Norton comes on Market Domination to speak on why she doesn't believe there is an AI bubble, noting the market characteristics that are at play. To watch more expert insights and analysis on the latest market action, check out more Market Domination.
+                    - button "Play Video" [ref=f3e6] [cursor=pointer]:
+                      - text: 
+                      - generic [ref=f3e7]: Play Video
+                    - text:       HD    
+                - generic [ref=e467]:
+                  - link "This strategist anticipates a market correction over an AI bubble" [ref=e468] [cursor=pointer]:
+                    - /url: https://finance.yahoo.com/video/strategist-anticipates-market-correction-over-202817525.html
+                    - generic [ref=e469]:
+                      - heading "This strategist anticipates a market correction over an AI bubble" [level=3] [ref=e470]
+                      - paragraph [ref=e471]: While US stocks (^DJI, ^IXIC, ^GSPC) are on pace for another day of losses, Empower Chief Investment Strategist Marta Norton believes the market is due for a correction as concerns about the AI bubble permeate Wall Street. Nvidia (NVDA) is scheduled to release its third quarter earnings results on Wednesday, November 19. Norton comes on Market Domination to speak on why she doesn't believe there is an AI bubble, noting the market characteristics that are at play. To watch more expert insights and analysis on the latest market action, check out more Market Domination.
+                  - generic [ref=e472]:
+                    - generic [ref=e473]: 9h ago
+                    - generic [ref=e474]:
+                      - link "NVDA" [ref=e475] [cursor=pointer]:
+                        - /url: /quote/NVDA/
+                        - generic [ref=e477]: NVDA
+                        - generic [ref=e479]: "-2.81%"
+                      - button "Follow" [ref=e481] [cursor=pointer]:
+                        - img [ref=e483]
+                    - generic [ref=e485]:
+                      - link "^GSPC" [ref=e486] [cursor=pointer]:
+                        - /url: /quote/%5EGSPC/
+                        - generic [ref=e488]: ^GSPC
+                        - generic [ref=e490]: "-0.83%"
+                      - button "Follow" [ref=e492] [cursor=pointer]:
+                        - img [ref=e494]
+              - generic [ref=e496]:
+                - list [ref=e497]:
+                  - listitem [ref=e498]:
+                    - button "Trump says he thinks he has a Fed chair pick in mind" [ref=e499] [cursor=pointer]
+                    - article [ref=e500]:
+                      - link "Trump says he thinks he has a Fed chair pick in mind" [ref=e501] [cursor=pointer]:
+                        - /url: https://finance.yahoo.com/video/trump-says-thinks-fed-chair-203955036.html
+                        - img "Trump says he thinks he has a Fed chair pick in mind" [ref=e503]
+                        - generic [ref=e504]:
+                          - img [ref=e506]
+                          - text: 03:06
+                      - generic [ref=e508]:
+                        - link "Trump says he thinks he has a Fed chair pick in mind" [ref=e509] [cursor=pointer]:
+                          - /url: https://finance.yahoo.com/video/trump-says-thinks-fed-chair-203955036.html
+                          - heading "Trump says he thinks he has a Fed chair pick in mind" [level=3] [ref=e510]
+                        - generic [ref=e512]:
+                          - text: Yahoo Finance Video
+                          - generic [ref=e513]: •
+                          - text: 9h ago
+                  - listitem [ref=e514]:
+                    - button "Is Big Tech's AI spending rational? Google CEO weighs in" [ref=e515] [cursor=pointer]
+                    - article [ref=e516]:
+                      - link "Is Big Tech's AI spending rational? Google CEO weighs in" [ref=e517] [cursor=pointer]:
+                        - /url: https://finance.yahoo.com/video/big-techs-ai-spending-rational-152151662.html
+                        - img "Is Big Tech's AI spending rational? Google CEO weighs in" [ref=e519]
+                        - generic [ref=e520]:
+                          - img [ref=e522]
+                          - text: 03:20
+                      - generic [ref=e524]:
+                        - link "Is Big Tech's AI spending rational? Google CEO weighs in" [ref=e525] [cursor=pointer]:
+                          - /url: https://finance.yahoo.com/video/big-techs-ai-spending-rational-152151662.html
+                          - heading "Is Big Tech's AI spending rational? Google CEO weighs in" [level=3] [ref=e526]
+                        - generic [ref=e527]:
+                          - generic [ref=e528]:
+                            - text: Yahoo Finance Video
+                            - generic [ref=e529]: •
+                            - text: 15h ago
+                          - generic [ref=e530]:
+                            - generic [ref=e531]:
+                              - link "GOOGL" [ref=e532] [cursor=pointer]:
+                                - /url: /quote/GOOGL/
+                                - generic [ref=e534]: GOOGL
+                                - generic [ref=e536]: "-0.26%"
+                              - button "Follow" [ref=e538] [cursor=pointer]:
+                                - img [ref=e540]
+                            - generic [ref=e542]:
+                              - link "GOOG" [ref=e543] [cursor=pointer]:
+                                - /url: /quote/GOOG/
+                                - generic [ref=e545]: GOOG
+                                - generic [ref=e547]: "-0.22%"
+                              - button "Follow" [ref=e549] [cursor=pointer]:
+                                - img [ref=e551]
+                  - listitem [ref=e553]:
+                    - 'button "Nvidia earnings, Fed minutes, MBS visit: What to Watch" [ref=e554] [cursor=pointer]'
+                    - article [ref=e555]:
+                      - 'link "Nvidia earnings, Fed minutes, MBS visit: What to Watch" [ref=e556] [cursor=pointer]':
+                        - /url: https://finance.yahoo.com/video/nvidia-earnings-fed-minutes-mbs-000000040.html
+                        - 'img "Nvidia earnings, Fed minutes, MBS visit: What to Watch" [ref=e558]'
+                        - generic [ref=e559]:
+                          - img [ref=e561]
+                          - text: 01:05
+                      - generic [ref=e563]:
+                        - 'link "Nvidia earnings, Fed minutes, MBS visit: What to Watch" [ref=e564] [cursor=pointer]':
+                          - /url: https://finance.yahoo.com/video/nvidia-earnings-fed-minutes-mbs-000000040.html
+                          - 'heading "Nvidia earnings, Fed minutes, MBS visit: What to Watch" [level=3] [ref=e565]'
+                        - generic [ref=e566]:
+                          - generic [ref=e567]:
+                            - text: Yahoo Finance Video
+                            - generic [ref=e568]: •
+                            - text: 6h ago
+                          - generic [ref=e569]:
+                            - generic [ref=e570]:
+                              - link "TGT" [ref=e571] [cursor=pointer]:
+                                - /url: /quote/TGT/
+                                - generic [ref=e573]: TGT
+                                - generic [ref=e575]: +0.06%
+                              - button "Follow" [ref=e577] [cursor=pointer]:
+                                - img [ref=e579]
+                            - generic [ref=e581]:
+                              - link "TJX" [ref=e582] [cursor=pointer]:
+                                - /url: /quote/TJX/
+                                - generic [ref=e584]: TJX
+                                - generic [ref=e586]: +0.28%
+                              - button "Follow" [ref=e588] [cursor=pointer]:
+                                - img [ref=e590]
+                  - listitem [ref=e592]:
+                    - button "Why younger caregivers may need to work 7-21 extra years" [ref=e593] [cursor=pointer]
+                    - article [ref=e594]:
+                      - link "Why younger caregivers may need to work 7-21 extra years" [ref=e595] [cursor=pointer]:
+                        - /url: https://finance.yahoo.com/video/why-younger-caregivers-may-7-200018117.html
+                        - img "Why younger caregivers may need to work 7-21 extra years" [ref=e597]
+                        - generic [ref=e598]:
+                          - img [ref=e600]
+                          - text: 22:48
+                      - generic [ref=e602]:
+                        - link "Why younger caregivers may need to work 7-21 extra years" [ref=e603] [cursor=pointer]:
+                          - /url: https://finance.yahoo.com/video/why-younger-caregivers-may-7-200018117.html
+                          - heading "Why younger caregivers may need to work 7-21 extra years" [level=3] [ref=e604]
+                        - generic [ref=e606]:
+                          - text: Yahoo Finance Video
+                          - generic [ref=e607]: •
+                          - text: 10h ago
+                - link "View More" [ref=e610] [cursor=pointer]:
+                  - /url: /videos/
+                  - text: View More
+                  - img [ref=e612]
+            - iframe [ref=e616]:
+              - iframe [ref=f4e2]:
+                - generic [ref=f5e2]:
+                  - generic [ref=f5e4]:
+                    - iframe [ref=f5e7]:
+                      - img [ref=f6e18] [cursor=pointer]
+                    - generic [ref=f5e8]:
+                      - generic:
+                        - img [ref=f5e12] [cursor=pointer]
+                        - button [ref=f5e14] [cursor=pointer]:
+                          - img [ref=f5e15]
+                  - img [ref=f5e22]
+                  - iframe
+                  - iframe
+            - heading "More News" [level=2] [ref=e619]
+          - generic [ref=e677]:
+            - generic [ref=e678]:
+              - link "Yahoo Finance" [ref=e679] [cursor=pointer]:
+                - /url: /
+                - img [ref=e681]
+              - generic [ref=e685]: Copyright © 2025 Yahoo. All rights reserved.
+              - generic [ref=e686]:
+                - link "Follow on Twitter" [ref=e687] [cursor=pointer]:
+                  - /url: https://twitter.com/YahooFinance
+                  - img [ref=e689]
+                - link "Follow on Facebook" [ref=e692] [cursor=pointer]:
+                  - /url: https://facebook.com/yahoofinance
+                  - img [ref=e694]
+                - link "Follow on LinkedIn" [ref=e696] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/yahoo-finance
+                  - img [ref=e698]
+            - generic [ref=e700]:
+              - generic [ref=e701]: What's trending
+              - link "Dow Jones" [ref=e702] [cursor=pointer]:
+                - /url: https://finance.yahoo.com/quote/%5EDJI/
+              - link "S&P 500" [ref=e703] [cursor=pointer]:
+                - /url: https://finance.yahoo.com/quote/SPY/
+              - link "DAX Index" [ref=e704] [cursor=pointer]:
+                - /url: https://finance.yahoo.com/quote/%5EGDAXI/
+              - link "Nvidia" [ref=e705] [cursor=pointer]:
+                - /url: https://finance.yahoo.com/quote/NVDA/
+              - link "Tesla" [ref=e706] [cursor=pointer]:
+                - /url: https://finance.yahoo.com/quote/TSLA/
+              - link "DJT" [ref=e707] [cursor=pointer]:
+                - /url: https://finance.yahoo.com/quote/DJT/
+              - link "Tariffs" [ref=e708] [cursor=pointer]:
+                - /url: https://finance.yahoo.com/topic/tariffs/
+            - generic [ref=e709]:
+              - generic [ref=e710]: Explore more
+              - link "Mortgages" [ref=e711] [cursor=pointer]:
+                - /url: https://finance.yahoo.com/personal-finance/mortgages/
+              - link "Credit Cards" [ref=e712] [cursor=pointer]:
+                - /url: https://finance.yahoo.com/personal-finance/credit-cards/
+              - link "Sectors" [ref=e713] [cursor=pointer]:
+                - /url: https://finance.yahoo.com/sectors/
+              - link "Crypto Heatmap" [ref=e714] [cursor=pointer]:
+                - /url: https://finance.yahoo.com/crypto/heatmap/
+              - link "Financial News" [ref=e715] [cursor=pointer]:
+                - /url: https://finance.yahoo.com/news/
+            - generic [ref=e716]:
+              - generic [ref=e717]: About
+              - link "Data Disclaimer" [ref=e718] [cursor=pointer]:
+                - /url: https://help.yahoo.com/kb/finance-for-web/SLN2310.html?locale=en_US
+              - link "Help" [ref=e719] [cursor=pointer]:
+                - /url: https://help.yahoo.com/kb/finance-for-web
+              - link "Feedback" [ref=e720] [cursor=pointer]:
+                - /url: https://yahoo.uservoice.com/forums/952723-finance-b3
+              - link "Sitemap" [ref=e721] [cursor=pointer]:
+                - /url: https://finance.yahoo.com/sitemap/
+              - link "Licensing" [ref=e722] [cursor=pointer]:
+                - /url: https://info.wrightsmedia.com/yahoo-finance-licensing
+              - link "What's New" [ref=e723] [cursor=pointer]:
+                - /url: https://finance.yahoo.com/about/whatsnew/
+              - link "About Our Ads" [ref=e724] [cursor=pointer]:
+                - /url: https://policies.oath.com/us/en/oath/privacy/adinfo/index.html
+              - generic [ref=e725]:
+                - generic [ref=e726]:
+                  - link "Terms" [ref=e727] [cursor=pointer]:
+                    - /url: https://guce.yahoo.com/terms?locale=en-US
+                  - text: and
+                  - link "Privacy Policy" [ref=e728] [cursor=pointer]:
+                    - /url: https://guce.yahoo.com/privacy-policy?locale=en-US
+                - link "Privacy Dashboard" [ref=e730] [cursor=pointer]:
+                  - /url: https://guce.yahoo.com/privacy-dashboard?locale=en-US
+      - complementary "Dock" [ref=e731]:
+        - dialog "Dock" [ref=e732]:
+          - generic [ref=e734]:
+            - search [ref=e739]:
+              - img [ref=e741]
+              - textbox "Quote Lookup" [ref=e743]
+            - generic [ref=e744]:
+              - list [ref=e745]:
+                - listitem [ref=e746]:
+                  - generic [ref=e749]:
+                    - generic [ref=e753]:
+                      - img [ref=e756]
+                      - generic [ref=e758]: U.S. markets open in 8h 8m
+                    - tablist [ref=e760]:
+                      - tab "US" [selected] [ref=e761]
+                      - tab "Europe" [ref=e762] [cursor=pointer]
+                      - tab "Asia" [ref=e763] [cursor=pointer]
+                      - tab "Cryptocurrencies" [ref=e764] [cursor=pointer]
+                      - tab "Rates" [ref=e765] [cursor=pointer]
+                      - tab "Commodities" [ref=e766] [cursor=pointer]
+                      - tab "Currencies" [ref=e767] [cursor=pointer]
+                    - list [ref=e768]:
+                      - listitem [ref=e769]:
+                        - generic [ref=e770]:
+                          - link "S&P Futures 6,630.50 -9.25 (-0.14%)" [ref=e771] [cursor=pointer]:
+                            - /url: /quote/ES%3DF/
+                            - generic [ref=e772]:
+                              - generic [ref=e773]: S&P Futures
+                              - img [ref=e776]
+                              - generic [ref=e780]: 6,630.50
+                              - generic [ref=e781]:
+                                - generic [ref=e783]: "-9.25"
+                                - generic [ref=e784]: (-0.14%)
+                          - button "Follow" [ref=e786] [cursor=pointer]:
+                            - img [ref=e788]
+                      - listitem [ref=e790]:
+                        - generic [ref=e791]:
+                          - link "Dow Futures 46,147.00 -37.00 (-0.08%)" [ref=e792] [cursor=pointer]:
+                            - /url: /quote/YM%3DF/
+                            - generic [ref=e793]:
+                              - generic [ref=e794]: Dow Futures
+                              - img [ref=e797]
+                              - generic [ref=e801]: 46,147.00
+                              - generic [ref=e802]:
+                                - generic [ref=e804]: "-37.00"
+                                - generic [ref=e805]: (-0.08%)
+                          - button "Follow" [ref=e807] [cursor=pointer]:
+                            - img [ref=e809]
+                      - listitem [ref=e811]:
+                        - generic [ref=e812]:
+                          - link "Nasdaq Futures 24,538.00 -57.75 (-0.23%)" [ref=e813] [cursor=pointer]:
+                            - /url: /quote/NQ%3DF/
+                            - generic [ref=e814]:
+                              - generic [ref=e815]: Nasdaq Futures
+                              - img [ref=e818]
+                              - generic [ref=e822]: 24,538.00
+                              - generic [ref=e823]:
+                                - generic [ref=e825]: "-57.75"
+                                - generic [ref=e826]: (-0.23%)
+                          - button "Follow" [ref=e828] [cursor=pointer]:
+                            - img [ref=e830]
+                      - listitem [ref=e832]:
+                        - generic [ref=e833]:
+                          - link "Russell 2000 Futures 2,352.50 -3.20 (-0.14%)" [ref=e834] [cursor=pointer]:
+                            - /url: /quote/RTY%3DF/
+                            - generic [ref=e835]:
+                              - generic [ref=e836]: Russell 2000 Futures
+                              - img [ref=e839]
+                              - generic [ref=e843]: 2,352.50
+                              - generic [ref=e844]:
+                                - generic [ref=e846]: "-3.20"
+                                - generic [ref=e847]: (-0.14%)
+                          - button "Follow" [ref=e849] [cursor=pointer]:
+                            - img [ref=e851]
+                      - listitem [ref=e853]:
+                        - generic [ref=e854]:
+                          - link "VIX 24.69 +2.31 (+10.32%)" [ref=e855] [cursor=pointer]:
+                            - /url: /quote/%5EVIX/
+                            - generic [ref=e856]:
+                              - generic [ref=e857]: VIX
+                              - img [ref=e860]
+                              - generic [ref=e864]: "24.69"
+                              - generic [ref=e865]:
+                                - generic [ref=e867]: "+2.31"
+                                - generic [ref=e868]: (+10.32%)
+                          - button "Follow" [ref=e870] [cursor=pointer]:
+                            - img [ref=e872]
+                      - listitem [ref=e874]:
+                        - generic [ref=e875]:
+                          - link "Gold 4,098.60 +32.10 (+0.79%)" [ref=e876] [cursor=pointer]:
+                            - /url: /quote/GC%3DF/
+                            - generic [ref=e877]:
+                              - generic [ref=e878]: Gold
+                              - img [ref=e881]
+                              - generic [ref=e885]: 4,098.60
+                              - generic [ref=e886]:
+                                - generic [ref=e888]: "+32.10"
+                                - generic [ref=e889]: (+0.79%)
+                          - button "Follow" [ref=e891] [cursor=pointer]:
+                            - img [ref=e893]
+                    - generic [ref=e895]:
+                      - button "prev" [disabled]:
+                        - generic:
+                          - img
+                      - button "next" [ref=e896] [cursor=pointer]:
+                        - img [ref=e898]
+                - listitem
+                - listitem
+                - listitem [ref=e900]:
+                  - generic [ref=e904]:
+                    - link "Portfolio" [ref=e908] [cursor=pointer]:
+                      - /url: /portfolios
+                      - generic [ref=e909]: Portfolio
+                    - generic [ref=e910]:
+                      - paragraph [ref=e911]: Sign in to access your portfolio
+                      - link "Sign in" [ref=e912] [cursor=pointer]:
+                        - /url: https://login.yahoo.com/config/login?done=https%3A%2F%2Ffinance.yahoo.com%2F&intl=us&lang=en-US&activity=dock-portfolio&pspid=1183300002&src=finance
+                - listitem [ref=e913]:
+                  - generic [ref=e916]:
+                    - link "Top gainers" [ref=e920] [cursor=pointer]:
+                      - /url: /gainers/
+                      - generic [ref=e921]: Top gainers
+                    - list [ref=e922]:
+                      - listitem [ref=e923]:
+                        - generic [ref=e924]:
+                          - link "ONDS Ondas Holdings Inc. 7.84 +1.59 (+25.34%)" [ref=e925] [cursor=pointer]:
+                            - /url: /quote/ONDS/
+                            - generic [ref=e926]:
+                              - generic [ref=e927]: ONDS
+                              - generic "Ondas Holdings Inc." [ref=e928]
+                              - generic [ref=e929]: "7.84"
+                              - generic [ref=e930]:
+                                - generic [ref=e932]: "+1.59"
+                                - generic [ref=e933]: (+25.34%)
+                          - button "Follow" [ref=e935] [cursor=pointer]:
+                            - img [ref=e937]
+                      - listitem [ref=e939]:
+                        - generic [ref=e940]:
+                          - link "DGNX Diginex Limited 16.20 +2.61 (+19.21%)" [ref=e941] [cursor=pointer]:
+                            - /url: /quote/DGNX/
+                            - generic [ref=e942]:
+                              - generic [ref=e943]: DGNX
+                              - generic "Diginex Limited" [ref=e944]
+                              - generic [ref=e945]: "16.20"
+                              - generic [ref=e946]:
+                                - generic [ref=e948]: "+2.61"
+                                - generic [ref=e949]: (+19.21%)
+                          - button "Follow" [ref=e951] [cursor=pointer]:
+                            - img [ref=e953]
+                      - listitem [ref=e955]:
+                        - generic [ref=e956]:
+                          - link "LGN Legence Corp. 44.93 +4.81 (+11.99%)" [ref=e957] [cursor=pointer]:
+                            - /url: /quote/LGN/
+                            - generic [ref=e958]:
+                              - generic [ref=e959]: LGN
+                              - generic "Legence Corp." [ref=e960]
+                              - generic [ref=e961]: "44.93"
+                              - generic [ref=e962]:
+                                - generic [ref=e964]: "+4.81"
+                                - generic [ref=e965]: (+11.99%)
+                          - button "Follow" [ref=e967] [cursor=pointer]:
+                            - img [ref=e969]
+                      - listitem [ref=e971]:
+                        - generic [ref=e972]:
+                          - link "TMC TMC the metals company Inc. 5.42 +0.54 (+10.95%)" [ref=e973] [cursor=pointer]:
+                            - /url: /quote/TMC/
+                            - generic [ref=e974]:
+                              - generic [ref=e975]: TMC
+                              - generic "TMC the metals company Inc." [ref=e976]
+                              - generic [ref=e977]: "5.42"
+                              - generic [ref=e978]:
+                                - generic [ref=e980]: "+0.54"
+                                - generic [ref=e981]: (+10.95%)
+                          - button "Follow" [ref=e983] [cursor=pointer]:
+                            - img [ref=e985]
+                      - listitem [ref=e987]:
+                        - generic [ref=e988]:
+                          - link "SRRK Scholar Rock Holding Corporation 39.81 +3.34 (+9.14%)" [ref=e989] [cursor=pointer]:
+                            - /url: /quote/SRRK/
+                            - generic [ref=e990]:
+                              - generic [ref=e991]: SRRK
+                              - generic "Scholar Rock Holding Corporation" [ref=e992]
+                              - generic [ref=e993]: "39.81"
+                              - generic [ref=e994]:
+                                - generic [ref=e996]: "+3.34"
+                                - generic [ref=e997]: (+9.14%)
+                          - button "Follow" [ref=e999] [cursor=pointer]:
+                            - img [ref=e1001]
+                - listitem [ref=e1003]:
+                  - generic [ref=e1006]:
+                    - link "Top losers" [ref=e1010] [cursor=pointer]:
+                      - /url: /losers/
+                      - generic [ref=e1011]: Top losers
+                    - list [ref=e1012]:
+                      - listitem [ref=e1013]:
+                        - generic [ref=e1014]:
+                          - link "NICE NICE Ltd. 105.65 -15.21 (-12.58%)" [ref=e1015] [cursor=pointer]:
+                            - /url: /quote/NICE/
+                            - generic [ref=e1016]:
+                              - generic [ref=e1017]: NICE
+                              - generic "NICE Ltd." [ref=e1018]
+                              - generic [ref=e1019]: "105.65"
+                              - generic [ref=e1020]:
+                                - generic [ref=e1022]: "-15.21"
+                                - generic [ref=e1023]: (-12.58%)
+                          - button "Follow" [ref=e1025] [cursor=pointer]:
+                            - img [ref=e1027]
+                      - listitem [ref=e1029]:
+                        - generic [ref=e1030]:
+                          - link "KLAR Klarna Group plc 31.63 -3.25 (-9.32%)" [ref=e1031] [cursor=pointer]:
+                            - /url: /quote/KLAR/
+                            - generic [ref=e1032]:
+                              - generic [ref=e1033]: KLAR
+                              - generic "Klarna Group plc" [ref=e1034]
+                              - generic [ref=e1035]: "31.63"
+                              - generic [ref=e1036]:
+                                - generic [ref=e1038]: "-3.25"
+                                - generic [ref=e1039]: (-9.32%)
+                          - button "Follow" [ref=e1041] [cursor=pointer]:
+                            - img [ref=e1043]
+                      - listitem [ref=e1045]:
+                        - generic [ref=e1046]:
+                          - link "PACS PACS Group, Inc. 14.43 -1.27 (-8.09%)" [ref=e1047] [cursor=pointer]:
+                            - /url: /quote/PACS/
+                            - generic [ref=e1048]:
+                              - generic [ref=e1049]: PACS
+                              - generic "PACS Group, Inc." [ref=e1050]
+                              - generic [ref=e1051]: "14.43"
+                              - generic [ref=e1052]:
+                                - generic [ref=e1054]: "-1.27"
+                                - generic [ref=e1055]: (-8.09%)
+                          - button "Follow" [ref=e1057] [cursor=pointer]:
+                            - img [ref=e1059]
+                      - listitem [ref=e1061]:
+                        - generic [ref=e1062]:
+                          - link "SNDK Sandisk Corporation 244.93 -20.95 (-7.88%)" [ref=e1063] [cursor=pointer]:
+                            - /url: /quote/SNDK/
+                            - generic [ref=e1064]:
+                              - generic [ref=e1065]: SNDK
+                              - generic "Sandisk Corporation" [ref=e1066]
+                              - generic [ref=e1067]: "244.93"
+                              - generic [ref=e1068]:
+                                - generic [ref=e1070]: "-20.95"
+                                - generic [ref=e1071]: (-7.88%)
+                          - button "Follow" [ref=e1073] [cursor=pointer]:
+                            - img [ref=e1075]
+                      - listitem [ref=e1077]:
+                        - generic [ref=e1078]:
+                          - link "GPCR Structure Therapeutics Inc. 34.50 -2.94 (-7.85%)" [ref=e1079] [cursor=pointer]:
+                            - /url: /quote/GPCR/
+                            - generic [ref=e1080]:
+                              - generic [ref=e1081]: GPCR
+                              - generic "Structure Therapeutics Inc." [ref=e1082]
+                              - generic [ref=e1083]: "34.50"
+                              - generic [ref=e1084]:
+                                - generic [ref=e1086]: "-2.94"
+                                - generic [ref=e1087]: (-7.85%)
+                          - button "Follow" [ref=e1089] [cursor=pointer]:
+                            - img [ref=e1091]
+                - listitem [ref=e1093]:
+                  - generic [ref=e1096]:
+                    - link "Most active" [ref=e1100] [cursor=pointer]:
+                      - /url: /most-active/
+                      - generic [ref=e1101]: Most active
+                    - list [ref=e1102]:
+                      - listitem [ref=e1103]:
+                        - generic [ref=e1104]:
+                          - link "NVDA NVIDIA Corporation 181.36 -5.24 (-2.81%)" [ref=e1105] [cursor=pointer]:
+                            - /url: /quote/NVDA/
+                            - generic [ref=e1106]:
+                              - generic [ref=e1107]: NVDA
+                              - generic "NVIDIA Corporation" [ref=e1108]
+                              - generic [ref=e1109]: "181.36"
+                              - generic [ref=e1110]:
+                                - generic [ref=e1112]: "-5.24"
+                                - generic [ref=e1113]: (-2.81%)
+                          - button "Follow" [ref=e1115] [cursor=pointer]:
+                            - img [ref=e1117]
+                      - listitem [ref=e1119]:
+                        - generic [ref=e1120]:
+                          - link "ONDS Ondas Holdings Inc. 7.84 +1.59 (+25.34%)" [ref=e1121] [cursor=pointer]:
+                            - /url: /quote/ONDS/
+                            - generic [ref=e1122]:
+                              - generic [ref=e1123]: ONDS
+                              - generic "Ondas Holdings Inc." [ref=e1124]
+                              - generic [ref=e1125]: "7.84"
+                              - generic [ref=e1126]:
+                                - generic [ref=e1128]: "+1.59"
+                                - generic [ref=e1129]: (+25.34%)
+                          - button "Follow" [ref=e1131] [cursor=pointer]:
+                            - img [ref=e1133]
+                      - listitem [ref=e1135]:
+                        - generic [ref=e1136]:
+                          - link "PLUG Plug Power Inc. 2.1400 +0.0550 (+2.64%)" [ref=e1137] [cursor=pointer]:
+                            - /url: /quote/PLUG/
+                            - generic [ref=e1138]:
+                              - generic [ref=e1139]: PLUG
+                              - generic "Plug Power Inc." [ref=e1140]
+                              - generic [ref=e1141]: "2.1400"
+                              - generic [ref=e1142]:
+                                - generic [ref=e1144]: "+0.0550"
+                                - generic [ref=e1145]: (+2.64%)
+                          - button "Follow" [ref=e1147] [cursor=pointer]:
+                            - img [ref=e1149]
+                      - listitem [ref=e1151]:
+                        - generic [ref=e1152]:
+                          - link "OPEN Opendoor Technologies Inc. 7.52 -0.32 (-4.08%)" [ref=e1153] [cursor=pointer]:
+                            - /url: /quote/OPEN/
+                            - generic [ref=e1154]:
+                              - generic [ref=e1155]: OPEN
+                              - generic "Opendoor Technologies Inc." [ref=e1156]
+                              - generic [ref=e1157]: "7.52"
+                              - generic [ref=e1158]:
+                                - generic [ref=e1160]: "-0.32"
+                                - generic [ref=e1161]: (-4.08%)
+                          - button "Follow" [ref=e1163] [cursor=pointer]:
+                            - img [ref=e1165]
+                      - listitem [ref=e1167]:
+                        - generic [ref=e1168]:
+                          - link "BBAI BigBear.ai Holdings, Inc. 5.98 +0.41 (+7.36%)" [ref=e1169] [cursor=pointer]:
+                            - /url: /quote/BBAI/
+                            - generic [ref=e1170]:
+                              - generic [ref=e1171]: BBAI
+                              - generic "BigBear.ai Holdings, Inc." [ref=e1172]
+                              - generic [ref=e1173]: "5.98"
+                              - generic [ref=e1174]:
+                                - generic [ref=e1176]: "+0.41"
+                                - generic [ref=e1177]: (+7.36%)
+                          - button "Follow" [ref=e1179] [cursor=pointer]:
+                            - img [ref=e1181]
+                - listitem [ref=e1183]:
+                  - generic [ref=e1186]:
+                    - generic [ref=e1188]:
+                      - link "Earnings events" [ref=e1190] [cursor=pointer]:
+                        - /url: /calendar/earnings?day=2025-11-19
+                        - generic [ref=e1191]: Earnings events
+                      - group [ref=e1192]:
+                        - generic [ref=e1194]:
+                          - checkbox "My earnings events" [ref=e1195] [cursor=pointer]
+                          - generic [ref=e1196]: My earnings events
+                          - img [ref=e1198]
+                        - generic [ref=e1201]:
+                          - checkbox "Earnings events" [checked] [ref=e1202] [cursor=pointer]
+                          - generic [ref=e1203]: Earnings events
+                          - img [ref=e1205]
+                    - generic [ref=e1207]:
+                      - button "Upcoming" [ref=e1212] [cursor=pointer]:
+                        - generic:
+                          - img
+                        - generic [ref=e1213]: Upcoming
+                      - generic [ref=e1214]:
+                        - generic [ref=e1215]:
+                          - generic [ref=e1216]:
+                            - generic [ref=e1218]: NOV
+                            - generic [ref=e1220]: "19"
+                          - generic [ref=e1222]:
+                            - link "TGT" [ref=e1224] [cursor=pointer]:
+                              - /url: /quote/TGT/
+                            - generic [ref=e1225]: Target Corporation
+                            - button "Add to calendar" [ref=e1227] [cursor=pointer]:
+                              - img [ref=e1229]
+                        - generic [ref=e1231]:
+                          - generic [ref=e1232]:
+                            - generic [ref=e1234]: NOV
+                            - generic [ref=e1236]: "20"
+                          - generic [ref=e1237]:
+                            - generic [ref=e1238]:
+                              - link "NVDA" [ref=e1240] [cursor=pointer]:
+                                - /url: /quote/NVDA/
+                              - generic [ref=e1241]: NVIDIA Corporation
+                              - button "Add to calendar" [ref=e1243] [cursor=pointer]:
+                                - img [ref=e1245]
+                            - generic [ref=e1247]:
+                              - link "WMT" [ref=e1249] [cursor=pointer]:
+                                - /url: /quote/WMT/
+                              - generic [ref=e1250]: Walmart Inc.
+                              - button "Add to calendar" [ref=e1252] [cursor=pointer]:
+                                - img [ref=e1254]
+                        - generic [ref=e1256]:
+                          - generic [ref=e1257]:
+                            - generic [ref=e1259]: NOV
+                            - generic [ref=e1261]: "21"
+                          - generic [ref=e1262]:
+                            - generic [ref=e1263]:
+                              - link "BULL" [ref=e1265] [cursor=pointer]:
+                                - /url: /quote/BULL/
+                              - generic [ref=e1266]: Webull Corporation
+                              - button "Add to calendar" [ref=e1268] [cursor=pointer]:
+                                - img [ref=e1270]
+                            - generic [ref=e1272]:
+                              - link "BMNR" [ref=e1274] [cursor=pointer]:
+                                - /url: /quote/BMNR/
+                              - generic [ref=e1275]: Bitmine Immersion Technologies, Inc.
+                              - button "Add to calendar" [ref=e1277] [cursor=pointer]:
+                                - img [ref=e1279]
+                - listitem [ref=e1281]:
+                  - generic [ref=e1284]:
+                    - link "Trending tickers" [ref=e1288] [cursor=pointer]:
+                      - /url: /trending-tickers
+                      - generic [ref=e1289]: Trending tickers
+                    - list [ref=e1290]:
+                      - listitem [ref=e1291]:
+                        - generic [ref=e1292]:
+                          - link "PLUG Plug Power Inc. 2.1400 +0.0550 (+2.64%)" [ref=e1293] [cursor=pointer]:
+                            - /url: /quote/PLUG/
+                            - generic [ref=e1294]:
+                              - generic [ref=e1295]: PLUG
+                              - generic "Plug Power Inc." [ref=e1296]
+                              - generic [ref=e1297]: "2.1400"
+                              - generic [ref=e1298]:
+                                - generic [ref=e1300]: "+0.0550"
+                                - generic [ref=e1301]: (+2.64%)
+                          - button "Follow" [ref=e1303] [cursor=pointer]:
+                            - img [ref=e1305]
+                      - listitem [ref=e1307]:
+                        - generic [ref=e1308]:
+                          - link "TMC TMC the metals company Inc. 5.42 +0.54 (+10.95%)" [ref=e1309] [cursor=pointer]:
+                            - /url: /quote/TMC/
+                            - generic [ref=e1310]:
+                              - generic [ref=e1311]: TMC
+                              - generic "TMC the metals company Inc." [ref=e1312]
+                              - generic [ref=e1313]: "5.42"
+                              - generic [ref=e1314]:
+                                - generic [ref=e1316]: "+0.54"
+                                - generic [ref=e1317]: (+10.95%)
+                          - button "Follow" [ref=e1319] [cursor=pointer]:
+                            - img [ref=e1321]
+                      - listitem [ref=e1323]:
+                        - generic [ref=e1324]:
+                          - link "HD The Home Depot, Inc. 336.48 -21.55 (-6.02%)" [ref=e1325] [cursor=pointer]:
+                            - /url: /quote/HD/
+                            - generic [ref=e1326]:
+                              - generic [ref=e1327]: HD
+                              - generic "The Home Depot, Inc." [ref=e1328]
+                              - generic [ref=e1329]: "336.48"
+                              - generic [ref=e1330]:
+                                - generic [ref=e1332]: "-21.55"
+                                - generic [ref=e1333]: (-6.02%)
+                          - button "Follow" [ref=e1335] [cursor=pointer]:
+                            - img [ref=e1337]
+                      - listitem [ref=e1339]:
+                        - generic [ref=e1340]:
+                          - link "OLMA Olema Pharmaceuticals, Inc. 20.14 +11.62 (+136.39%)" [ref=e1341] [cursor=pointer]:
+                            - /url: /quote/OLMA/
+                            - generic [ref=e1342]:
+                              - generic [ref=e1343]: OLMA
+                              - generic "Olema Pharmaceuticals, Inc." [ref=e1344]
+                              - generic [ref=e1345]: "20.14"
+                              - generic [ref=e1346]:
+                                - generic [ref=e1348]: "+11.62"
+                                - generic [ref=e1349]: (+136.39%)
+                          - button "Follow" [ref=e1351] [cursor=pointer]:
+                            - img [ref=e1353]
+                      - listitem [ref=e1355]:
+                        - generic [ref=e1356]:
+                          - link "NET Cloudflare, Inc. 196.53 -5.72 (-2.83%)" [ref=e1357] [cursor=pointer]:
+                            - /url: /quote/NET/
+                            - generic [ref=e1358]:
+                              - generic [ref=e1359]: NET
+                              - generic "Cloudflare, Inc." [ref=e1360]
+                              - generic [ref=e1361]: "196.53"
+                              - generic [ref=e1362]:
+                                - generic [ref=e1364]: "-5.72"
+                                - generic [ref=e1365]: (-2.83%)
+                          - button "Follow" [ref=e1367] [cursor=pointer]:
+                            - img [ref=e1369]
+                - listitem [ref=e1371]:
+                  - generic [ref=e1374]:
+                    - link "Top economic events" [ref=e1378] [cursor=pointer]:
+                      - /url: /calendar/economic
+                      - generic [ref=e1379]: Top economic events
+                    - img "Progress Spinner" [ref=e1381]
+              - button "Edit your Dock" [ref=e1399] [cursor=pointer]:
+                - generic [ref=e1400]: Edit your Dock
+              - generic [ref=e1402]:
+                - generic [ref=e1403]:
+                  - link "Terms" [ref=e1404] [cursor=pointer]:
+                    - /url: https://guce.yahoo.com/terms?locale=en-US
+                  - text: and
+                  - link "Privacy Policy" [ref=e1405] [cursor=pointer]:
+                    - /url: https://guce.yahoo.com/privacy-policy?locale=en-US
+                - link "Privacy Dashboard" [ref=e1407] [cursor=pointer]:
+                  - /url: https://guce.yahoo.com/privacy-dashboard?locale=en-US
+            - iframe [ref=e1408]:
+              
